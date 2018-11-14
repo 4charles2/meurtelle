@@ -1,0 +1,17 @@
+{# src/CHARLY/PlatformBundle/ressources/views/Advert/add.html.twig #}
+
+{% extends  "CHARLYPlatformBundle::layout.html.twig" %}
+
+{% block title %}{{  parent() }} - Nouvelle Annonce {% endblock %}
+
+{% block charlyPlatform_body %}
+    <h2>Ajouter une annonce ! </h2>
+
+    {{ include("CHARLYPlatformBundle:Advert:form.html.twig") }}
+
+    <p>
+        <a href="{{ path('charly_platform_homepage') }}" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i>Retour à la liste des annonces</a>
+    </p>
+    <p>Attention cette Annonce sera ajouté directement sur la page d'accueill après validation !</p>
+    <p>Merci de respecté la <em>charte de mise en ligne des annonces</em> Sinon elle sera suprimé</p>
+{% endblock %}

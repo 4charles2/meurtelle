@@ -1,0 +1,11 @@
+{# src/CHARLY/PlatformBundle/ressources/view/Advert/menu.html.twig#}
+
+<ul class="nav nav-pills nav-stacked">
+    {% for advert in listAdverts %}
+        <li>
+            <a href="{{ path('charly_platform_view', {id: advert.id}) }}">
+                {{ advert.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

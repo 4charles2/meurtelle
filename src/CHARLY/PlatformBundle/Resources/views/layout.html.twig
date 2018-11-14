@@ -1,0 +1,12 @@
+{# src/CHARLY/PlatformBundle/ressource/views/layout.html.twig #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %} Annonces - {{ parent()  }} {% endblock %}
+
+{% block body %}
+    <h1>Les Annonces ! </h1>
+<hr>
+    {% block charlyPlatform_body %}
+    {% endblock %}
+{% endblock body %}

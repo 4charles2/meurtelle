@@ -1,0 +1,3 @@
+charly_platform:
+    resource: "@CHARLYPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform

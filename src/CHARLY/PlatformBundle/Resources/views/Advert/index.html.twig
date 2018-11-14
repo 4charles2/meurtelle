@@ -1,0 +1,27 @@
+{# src/charly/platformBundle/ressources/views/Advert/index.html.twig #}
+
+{% extends "CHARLYPlatformBundle::layout.html.twig" %}
+
+{% block title %} {{ parent()  }} - Accueil {% endblock %}
+
+{% block charlyPlatform_body %}
+    <h2>Liste des annonces !</h2>
+    <section>
+        <ul class="containAdvert" >
+        {% for advert in listAdverts %}
+
+                <li class="liAdvert" style="list-style-type: none; border: 2px solid darkslategray; margin-bottom: 20px; padding: 20px">
+                    <a href={{ path('charly_platform_view',{'id': advert.id}) }}>
+                        {{ advert.title }}
+                    </a>
+                    par {{ advert.author }},
+                    Le {{ advert.date|date('d/m/Y') }}.
+                       </li>
+
+
+        {% else %}
+            <li class="liAdvert" style="border: 2px solid darkslategray; margin-bottom: 20px">Pas encore d'annonce en ligne <a href="{{ path('charly_platform_add') }}">Ajouter la votre</a></li>
+        {% endfor %}
+            </ul>
+    </section>
+{% endblock %}

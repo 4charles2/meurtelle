@@ -1,0 +1,18 @@
+{# src/CHARLY/platformBundle/views/Advert/edit.html.twig #}
+
+{% extends 'CHARLYPlatformBundle::layout.html.twig' %}
+
+{% block title %} Modifier une Annonce - {{ parent() }} {% endblock %}
+
+{% block charlyPlatform_body %}
+    <h2>Modifier l'annonce</h2>
+    {{ include('CHARLYPlatformBundle:Advert:form.html.twig') }}
+    <p>Vous modifier une annonce déjà existante, merci de ne pas changer l'esprit général de l'annonce déjà publié.</p>
+    <p>
+        <a href="{{ path('charly_platform_view', {'id': advert.id}) }}" class="btn btn-default">
+            <i class="glyphigon glyphicon-chevron-left"></i>
+            Retour à l'annonce
+        </a>
+    </p>
+
+{% endblock %}

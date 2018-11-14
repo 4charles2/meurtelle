@@ -1,0 +1,33 @@
+charly_platform_homepage:
+    path: /{page}
+    defaults:
+        _controller: CHARLYPlatformBundle:Advert:index
+        page: 1
+    requirements:
+        page: \d*
+
+charly_platform_view:
+    path: /advert/{id}
+    defaults:
+        _controller: CHARLYPlatformBundle:Advert:view
+    requirements:
+        id: \d+
+
+charly_platform_add:
+    path: /add
+    defaults:
+        _controller: CHARLYPlatformBundle:Advert:add
+
+charly_platform_delete:
+    path: /delete/{id}
+    defaults:
+        _controller: CHARLYPlatformBundle:Advert:delete
+    requirements:
+        id: \d+
+
+charly_platform_edit:
+    path: /edit/{id}
+    defaults:
+        _controller: CHARLYPlatformBundle:Advert:edit
+    requirements:
+        id: \d+
