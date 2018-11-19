@@ -34,7 +34,7 @@ class NewsController extends Controller
     public function fluxRssAction($url, $nbNew ){
         //$fluxRss = simplexml_load_file('https://web.developpez.com/rss.php');
 
-        $fluxRss = self::readRss($url);
+        $fluxRss = self::readFlux($url);
 
         return $this->render('CHARLYNewsBundle:News:fluxRss.html.twig',array('flux' => $fluxRss, 'limit' => $nbNew));
     }

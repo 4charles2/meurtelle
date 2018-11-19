@@ -8,7 +8,6 @@
     <p>Emplois, Stage, Freelance ... !</p>
 {% endblock %}
 {% block menuBundle %}
-    <nav id="menuPlatform" class="col-md-3">
         <h3>Les Annonces</h3>
         <ul class="nav nav-pills nav-stacked">
             <li><a href="{{ path('charly_platform_homepage') }}">Listes des annoces</a></li>
@@ -16,7 +15,6 @@
         </ul>
         <h4>Dernières annonces</h4>
         {{  render(controller("CHARLYPlatformBundle:Advert:menu", {'limit': 3})) }}
-    </nav>
 {% endblock %}
 {% block body %}
     <h1>Les Annonces ! </h1>

@@ -1,10 +1,13 @@
 .container{
     background-color: #d7d7d7;
 }
+
 .maxWidth-child h4{
     border: 1px solid black;
     border-radius: 5px 5px 0px 0px;
     padding: 5px;
+    background-color: #d36a21;
+    color: white;
 }
 .maxWidth-child article{
     box-shadow: 2px 2px 2px black;
@@ -15,16 +18,18 @@
 .boxShadow{
     box-shadow: 21px 22px 7px -23px black, -21px 24px 7px -23px black;
 }
-.maxWidth-child h4{
-    border: 1px solid black;
-    border-radius: 5px 5px 0px 0px;
-    padding: 5px;
-    background-color: #e0b988;
-}
+
 .maxWidth-child h6{
     padding: 5px;
-    background-color: #f1dcba;
+    background-color: #fef689;
 }
 blockquote:hover{
     transform: scale(1.02);
+}
+nav{
+    box-shadow: 1px 0px 5px -4px black;
+}
+.nav-pills {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }

@@ -10,6 +10,7 @@
     {% block stylesheets %}
         <link href="https://fonts.googleapis.com/css?family=Radley" rel="stylesheet">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css" />
     {% endblock %}
     <title>{% block title %} Meurtelle 54 {% endblock %}</title>
 </head>
@@ -43,9 +44,14 @@
     </header>
 
     <div class="row">
-        {% block menuBundle %}
-        {% endblock %}
+        <nav id="menuPlatform" class="col-md-3">
+            <h3>Menu </h3>
+            {{ include('CHARLYCoreBundle:Core:menu.html.twig') }}
 
+        {% block menuBundle %}
+
+        {% endblock %}
+        </nav>
         <section id="content" class="col-lg-9">
             {% block body %}
 

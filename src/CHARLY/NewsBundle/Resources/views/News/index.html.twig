@@ -1,11 +1,22 @@
 {# src/CHARLY/CoreBundle/ressources/views/core/index.html.twig #}
 
-{% extends 'CHARLYCoreBundle::layout.html.twig' %}
+{% extends 'CHARLYNewsBundle::layout.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/style.css" />
+    {{ parent() }}
+{% endblock %}
+
+{% block menuBundle %}
+        <h3>Actualités</h3>
+            {{ include('CHARLYCoreBundle:Core:menu.html.twig') }}
+{% endblock %}
 
 {% block body %}
+        <div class="maxWidth-child boxShadow" >
     <h4>Toutes l'actualités : </h4>
     {% for flux in url %}
         {{ render(controller('CHARLYNewsBundle:News:fluxRss', {'url': flux, 'nbNew': 5})) }}
     {% endfor %}
+            </div>
 {% endblock %}

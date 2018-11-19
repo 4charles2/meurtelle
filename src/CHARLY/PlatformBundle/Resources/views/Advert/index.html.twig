@@ -11,7 +11,7 @@
         <ul class="containAdvert" >
         {% for advert in listAdverts %}
 
-                <li class="liAdvert" style="list-style-type: none; border: 2px solid darkslategray; margin-bottom: 20px; padding: 20px">
+                <li class="liAdvert" style="list-style-type: none; border: 1px solid darkslategray; margin-bottom: 20px; padding: 20px">
                     <a href={{ path('charly_platform_view',{'id': advert.id}) }}>
                         {{ advert.title }}
                     </a>

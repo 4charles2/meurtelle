@@ -7,13 +7,11 @@
     {{ parent() }}
 {% endblock %}
 {% block menuBundle %}
-    <nav id="menuPlatform" class="col-md-3">
-        <h3>Menu </h3>
-    {{ include('CHARLYCoreBundle:Core:menu.html.twig') }}
-    </nav>
+
 {% endblock %}
+
  {% block body %}
-<section class="col-lg-6" >
+<section class="col-lg-6 col-md-4" >
     <div class="maxWidth-child boxShadow" >
     <h4>Les Toutes dernieres actualités : </h4>
         {% for news in flux %}
@@ -27,7 +25,7 @@
         {% endfor %}
     </div>
 </section>
-<section class="col-lg-6">
+<section class="col-lg-6 col-md-4">
     <div class="maxWidth-child boxShadow">
     <h4>Les 3 dernieres Offres d'emplois :</h4>
         {{ render(controller('CHARLYPlatformBundle:Advert:menu', {'limit': 3})) }}
