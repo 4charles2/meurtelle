@@ -1,0 +1,36 @@
+{# src/CHARLY/CoreBundle/ressources/views/Core/index.html.twig #}
+
+{% extends 'CHARLYCoreBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/style.css" >
+    {{ parent() }}
+{% endblock %}
+{% block menuBundle %}
+    <nav id="menuPlatform" class="col-md-3">
+        <h3>Menu </h3>
+    {{ include('CHARLYCoreBundle:Core:menu.html.twig') }}
+    </nav>
+{% endblock %}
+ {% block body %}
+<section class="col-lg-6" >
+    <div class="maxWidth-child boxShadow" >
+    <h4>Les Toutes dernieres actualités : </h4>
+        {% for news in flux %}
+            <article>
+                <h6> {{ news.channel.title }} </h6>
+                <blockquote>
+                    <p>{{ news.channel.description }} </p>
+                    <cite>{{ news.channel.link }} </cite>
+                </blockquote>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+<section class="col-lg-6">
+    <div class="maxWidth-child boxShadow">
+    <h4>Les 3 dernieres Offres d'emplois :</h4>
+        {{ render(controller('CHARLYPlatformBundle:Advert:menu', {'limit': 3})) }}
+    </div>
+</section>
+{% endblock %}

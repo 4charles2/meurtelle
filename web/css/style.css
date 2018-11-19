@@ -1,0 +1,30 @@
+.container{
+    background-color: #d7d7d7;
+}
+.maxWidth-child h4{
+    border: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+}
+.maxWidth-child article{
+    box-shadow: 2px 2px 2px black;
+}
+.maxWidth-child * {
+    width: 100%;
+}
+.boxShadow{
+    box-shadow: 21px 22px 7px -23px black, -21px 24px 7px -23px black;
+}
+.maxWidth-child h4{
+    border: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+    background-color: #e0b988;
+}
+.maxWidth-child h6{
+    padding: 5px;
+    background-color: #f1dcba;
+}
+blockquote:hover{
+    transform: scale(1.02);
+}

@@ -10,13 +10,9 @@ namespace CHARLY\PlatformBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use Symfony\Component\Serializer\Encoder\JsonEncode;
+
 
 class AdvertController extends Controller
 {
@@ -24,6 +20,7 @@ class AdvertController extends Controller
     protected $listAdverts = null;
 
     function __construct(){
+        //https://emploi.alsacreations.com/offres.xml
         $this->listAdverts = array(
             array(
                 'title' => 'Recherche developpeur Symfony',
@@ -89,6 +86,7 @@ class AdvertController extends Controller
         return $this->render('CHARLYPlatformBundle:Advert:add.html.twig');
     }
     function menuAction($limit){
+        $anytime =  $limit;
 
         $listAdverts = array(
             array('id' => 2, 'title' => 'Recherche developper symfony'),

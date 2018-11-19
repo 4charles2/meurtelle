@@ -1,0 +1,4 @@
+charly_core_homepage:
+    path:   /
+    defaults:
+        _controller: CHARLYCoreBundle:Core:index

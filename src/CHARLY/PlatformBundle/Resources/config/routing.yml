@@ -1,3 +1,5 @@
+# CHARLY/PlatformBundle/resources/config/routing.yml
+
 charly_platform_homepage:
     path: /{page}
     defaults:

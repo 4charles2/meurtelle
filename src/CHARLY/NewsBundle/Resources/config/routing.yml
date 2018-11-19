@@ -1,0 +1,5 @@
+# src/CHARLY/NewsBundle/Ressources/config/routing.yml
+charly_news_homepage:
+    path:     /
+    defaults:
+        _controller: CHARLYNewsBundle:News:index

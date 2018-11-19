@@ -1,3 +1,13 @@
+#app/config/routin.yml
+
+charly_core:
+    resource: "@CHARLYCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
 charly_platform:
     resource: "@CHARLYPlatformBundle/Resources/config/routing.yml"
     prefix:   /platform
+
+charly_news:
+    resource: "@CHARLYNewsBundle/Resources/config/routing.yml"
+    prefix: /news

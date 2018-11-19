@@ -1,0 +1,11 @@
+{# src/CHARLY/CoreBundle/ressources/views/core/index.html.twig #}
+
+{% extends 'CHARLYCoreBundle::layout.html.twig' %}
+
+
+{% block body %}
+    <h4>Toutes l'actualités : </h4>
+    {% for flux in url %}
+        {{ render(controller('CHARLYNewsBundle:News:fluxRss', {'url': flux, 'nbNew': 5})) }}
+    {% endfor %}
+{% endblock %}

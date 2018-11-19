@@ -1,0 +1,48 @@
+{# src/CHARLY/NewsBundle/Ressources/views/News/fluxRss.html.twig #}
+
+<h6> {{ flux.channel.title }} </h6>
+<blockquote>
+    <p>{{ flux.channel.description }} </p>
+    <cite>{{ flux.channel.link }} </cite>
+</blockquote>
+
+<ul id="containNew">
+        {% if limit > 0 %}
+                {% for new in flux.channel.item if limit %}
+                    <li class="alert alert-secondary" role="alert" style="display: flex">
+                        <div>
+                            <h3> {{ new.title }}</h3>
+                            <hr>
+                            <p> {{ new.description|raw  }} </p>
+                            <cite> Lien : <a href=" {{ new.link }} "> {{ new.link }}</a></cite>
+                        </div>
+                    </li>
+                    {% set limit= limit - 1 %}
+                {% endfor %}
+        {% else %}
+                {% for new in flux.channel.item %}
+                    <li class="alert alert-secondary" role="alert" style="display: flex">
+                        {% if new.enclosure is defined %}
+                            <div>  <img src="{{ new.enclosure|raw  }}" alt="" ></div>
+                        {% endif %}
+                        <div>
+                            <h3> {{ new.title }}</h3>
+                            <hr>
+                            <p> {{ new.description|raw  }} </p>
+                            <cite> <a href=" {{ new.link }} "> {{ new.link }}</a></cite>
+                        </div>
+                    </li>
+                {% endfor %}
+        {% endif %}
+</ul>
+<p>Date de publication : {% if flux.channel.pubDate is defined %} {{ flux.channel.pubDate }} {% endif %}</p>
+
+{#
+    <div class="card border-info mb-3" style="max-width: 18rem;">
+  <div class="card-header">Header</div>
+  <div class="card-body text-info">
+    <h5 class="card-title">Info card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+#}
