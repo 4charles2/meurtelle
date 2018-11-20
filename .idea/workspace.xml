@@ -658,7 +658,7 @@
       <workItem from="1541857823549" duration="50046000" />
       <workItem from="1542119815254" duration="9169000" />
       <workItem from="1542709814530" duration="433000" />
-      <workItem from="1542711273719" duration="15954000" />
+      <workItem from="1542711273719" duration="16526000" />
     </task>
     <task id="LOCAL-00001" summary="create repository Vcs git for project symfony with OpenClassroom">
       <created>1542209791663</created>
@@ -685,7 +685,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92869000" />
+    <option name="totallyTimeSpent" value="93441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="104" width="1936" height="1056" extended-state="6" />
