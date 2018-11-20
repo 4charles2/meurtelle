@@ -15,13 +15,15 @@
     <div class="maxWidth-child boxShadow" >
     <h4>Les Toutes dernieres actualités : </h4>
         {% for news in flux %}
+            <a href="{{ path('charly_news_homepage') }}" style="color: black">
             <article>
-                <h6> {{ news.channel.title }} </h6>
+                <h6> {{ news.title }} </h6>
                 <blockquote>
-                    <p>{{ news.channel.description }} </p>
-                    <cite>{{ news.channel.link }} </cite>
+                    <p>{{ news.description }} </p>
+                    <cite>{{ news.link }} </cite>
                 </blockquote>
             </article>
+            </a>
         {% endfor %}
     </div>
 </section>

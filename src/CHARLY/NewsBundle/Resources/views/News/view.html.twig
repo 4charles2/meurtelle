@@ -1,28 +1,9 @@
 {# src/CHARLY/NewsBundle/ressource/views/News/view.html.twig #}
 
-{% extends "CHARLYCoreBundle::layout.html.twig" %}
+{% extends "CHARLYNewsBundle::layout.html.twig" %}
 
-{% block title %} Vue de l'annonce - {{ parent() }} {% endblock %}
+{% block title %} Vue de l'article - {{ parent() }} {% endblock %}
 
-{% block charlyPlatform_body %}
-    <h2>{{ advert.title }}</h2>
-    <cite>Par {{ advert.author }}, Le {{ advert.date|date('d/m/Y') }}</cite>
-
-    <div class="well">
-        {{ advert.content }}
-    </div>
-    <p>
-        <a href="{{ path('charly_platform_homepage') }} " class="btn btn-default">
-            <i class="glyphicon glyphicon-chevron-left"></i>
-            Retour à la liste des annonces
-        </a>
-        <a href="{{ path('charly_platform_edit', {'id': advert.id})  }} " class="btn btn-danger">
-            <i class="glyphicon glyphicon-edit"></i>
-            Modifier l'annonce
-        </a>
-        <a href="{{ path('charly_platform_delete', {'id': advert.id})  }} " class="btn btn-danger">
-            <i class="glyphicon glyphicon-trash"></i>
-            Suprimer l'annonce
-        </a>
-    </p>
+{% block body %}
+    {{ include('CHARLYNewsBundle:News:fluxRss.html.twig', {'nbNew': 0, 'description': true, 'flux': flux }) }}
 {% endblock %}

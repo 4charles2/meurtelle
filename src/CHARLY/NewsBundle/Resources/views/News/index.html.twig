@@ -1,4 +1,4 @@
-{# src/CHARLY/CoreBundle/ressources/views/core/index.html.twig #}
+{# src/CHARLY/NewsBundle/ressources/views/News/index.html.twig #}
 
 {% extends 'CHARLYNewsBundle::layout.html.twig' %}
 
@@ -10,6 +10,7 @@
 {% block menuBundle %}
         <h3>Actualités</h3>
             <ul class="nav nav-pills nav-stacked">
+                <li><a href="{{ path('charly_news_homepage') }}">Toutes l'actualités</a></li>
                 <li><a href="https://developper.com">developper.com</a></li>
                 <li><a href="https://www.alsacreations.com">alsacreations.com</a></li>
             </ul>
@@ -19,7 +20,7 @@
         <div class="maxWidth-child boxShadow" >
     <h4>Toutes l'actualités : </h4>
     {% for flux in url %}
-        {{ render(controller('CHARLYNewsBundle:News:fluxRss', {'url': flux, 'nbNew': 5})) }}
+        {{ render(controller('CHARLYNewsBundle:News:readRss', {'flux': flux, 'nbNew': 5, 'description': false, 'rss': loop.index })) }}
     {% endfor %}
             </div>
 {% endblock %}
