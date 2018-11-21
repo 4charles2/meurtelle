@@ -9,6 +9,7 @@
 namespace CHARLY\NewsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpKernel\Tests\DependencyInjection\RendererService;
 
 class NewsController extends Controller
 {
@@ -24,7 +25,7 @@ class NewsController extends Controller
      * @param Bool description TRUE show description FALSE not show description
      * @param Int id article du flux
      *
-     * @return Response template twig fluxRss.html.twig
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function ReadRssAction($flux, $nbNew, $description, $article){
 
