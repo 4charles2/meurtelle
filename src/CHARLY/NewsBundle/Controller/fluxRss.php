@@ -20,7 +20,7 @@ namespace CHARLY\NewsBundle\Controller;
  */
 class fluxRss
 {
-    private $url;
+    private $urls;
     private $flux;
 
     /**
@@ -30,45 +30,27 @@ class fluxRss
      * @throws \exception
      */
     function __construct($url){
-        $this->url = $url;
+        $this->urls = $url;
         $this->setflux();
     }
     public function setflux(){
+        $i = 0;
+        foreach ($this->urls as $item) {
+            $flux[$i] = simplexml_load_file($item, "SimpleXMLElement", LIBXML_NOCDATA);
+            if($flux[$i] == false)
+                throw new \exception("Le flux [ ".$item." ] n'à pas pu être chargé !");
 
-        $flux = simplexml_load_file($this->url, "SimpleXMLElement", LIBXML_NOCDATA);
-
-        if($flux == false)
-            throw new \exception("Le flux ".$this->url." n'à pas pu etre chargé !");
-
-
-        $this->flux['title'] = $flux->channel->title;
-        $this->flux['description'] = $flux->channel->description;
-        $this->flux['link'] = $flux->channel->link;
-        $this->flux['item'] = $flux->channel->item;
-    }
-
-    public function getTitleFlux(){
-        return $this->flux['title'];
-    }
-    public function getDescriptionFlux(){
-        return $this->flux["description"];
-    }
-    public function getLink(){
-        return $this->flux['link'];
+            $this->flux[$i]['title'] = $flux[$i]->channel->title;
+            $this->flux[$i]['description'] = $flux[$i]->channel->description;
+            $this->flux[$i]['link'] = $flux[$i]->channel->link;
+            $this->flux[$i]['item'] = $flux[$i]->channel->item;
+            $i++;
+        }
     }
     public function getFlux(){
         return $this->flux;
     }
-    public function getAllArticle(){
-        return $this->flux['item'];
-    }
-    public function getArticle($id){
-        return $this->flux['item'][$id];
-    }
-    public function upadte(){
-        $this->setflux();
-    }
-    public function getNbArticle(){
-        return count($this->getAllArticle());;
+    public function getArticle($id, $article){
+        return $this->flux[$id-1]['item'][$article-1];
     }
 }

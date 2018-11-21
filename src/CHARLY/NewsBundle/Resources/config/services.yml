@@ -2,3 +2,12 @@ services:
 #    charly_news.example:
 #        class: CHARLY\NewsBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+    charly_news.fluxRss:
+      class: CHARLY\NewsBundle\Controller\fluxRss
+      arguments:
+        - ['https://web.developpez.com/index/rss', 'https://www.alsacreations.com/rss/actualites.xml']
+
+#Si fonctionne pas dans app/service.yml
+    #Tester
+parameters:
+    app_webmaster: "tognol charles"

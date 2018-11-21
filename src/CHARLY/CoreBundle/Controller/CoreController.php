@@ -15,6 +15,6 @@ class CoreController extends Controller
         foreach( NewsController::flux as $key => $url)
             $rss[$i++] = $url->getFlux() ? : $rss[$i] = "Le Flux Rss : ".$url." n'à pas pu être chargé ";
 */
-        return $this->render('CHARLYCoreBundle:Core:index.html.twig', array('flux' => NewsController::$flux ));
+        return $this->render('CHARLYCoreBundle:Core:index.html.twig', array('flux' => $this->get('charly_news.fluxRss')->getFlux() ));
     }
 }

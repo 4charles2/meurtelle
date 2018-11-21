@@ -11,4 +11,4 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: 86ac8b0c32085d740682cb1e9fb7b7b55282f32b
-    app_webmaster: "tognol charles"
+

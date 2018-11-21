@@ -14,8 +14,8 @@
 <section class="col-lg-6 col-md-4" >
     <div class="maxWidth-child boxShadow" >
     <h4>Les Toutes dernieres actualités : </h4>
-        {% for news in flux %}
-            <a href="{{ path('charly_news_homepage') }}" style="color: black">
+        {% for key, news in flux %}
+                <a href="{{ path('charly_news_homepage') }}" style="color: black">
             <article>
                 <h6> {{ news.title }} </h6>
                 <blockquote>
