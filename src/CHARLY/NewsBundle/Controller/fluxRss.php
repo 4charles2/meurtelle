@@ -50,6 +50,13 @@ class fluxRss
     public function getFlux(){
         return $this->flux;
     }
+
+    /**
+     * @param $id
+     * @param $article
+     *
+     * @return mixed
+     */
     public function getArticle($id, $article){
         return $this->flux[$id-1]['item'][$article-1];
     }

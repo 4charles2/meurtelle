@@ -2,3 +2,7 @@ charly_core_homepage:
     path:   /
     defaults:
         _controller: CHARLYCoreBundle:Core:index
+charly_core_contact:
+    path: /contact
+    defaults:
+        _controller: CHARLYCoreBundle:Core:contact
