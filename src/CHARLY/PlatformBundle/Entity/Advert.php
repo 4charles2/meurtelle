@@ -49,8 +49,19 @@ class Advert
      */
     private $content;
 
-    publuc function __construct(){
+    /**
+     * @ORM\Column(name="published", type="boolean")
+     */
+    private $published = true;
+
+    /**
+     * Advert constructor.
+     * @throws \Exception
+     */
+
+    public function __construct(){
         //Par default la date de l'annonce et la date d'aujourd'hui
+        $this->published = True;
         $this->date = new \Datetime();
 }
 
@@ -159,5 +170,28 @@ class Advert
     {
         return $this->content;
     }
-}
 
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     *
+     * @return Advert
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+    
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean
+     */
+    public function getPublished()
+    {
+        return $this->published;
+    }
+}

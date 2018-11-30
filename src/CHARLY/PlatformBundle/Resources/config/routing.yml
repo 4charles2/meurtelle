@@ -1,12 +1,9 @@
 # CHARLY/PlatformBundle/resources/config/routing.yml
 
 charly_platform_homepage:
-    path: /{page}
+    path: /
     defaults:
         _controller: CHARLYPlatformBundle:Advert:index
-        page: 1
-    requirements:
-        page: \d*
 
 charly_platform_view:
     path: /advert/{id}

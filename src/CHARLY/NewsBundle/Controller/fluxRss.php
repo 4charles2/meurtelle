@@ -33,6 +33,12 @@ class fluxRss
         $this->urls = $url;
         $this->setflux();
     }
+
+    /**
+     * Creer le flux dans la propriete $this->flux
+     *
+     * @throws \exception
+     */
     public function setflux(){
         $i = 0;
         foreach ($this->urls as $item) {
@@ -47,6 +53,10 @@ class fluxRss
             $i++;
         }
     }
+
+    /**
+     * @return mixed $this->flux
+     */
     public function getFlux(){
         return $this->flux;
     }
