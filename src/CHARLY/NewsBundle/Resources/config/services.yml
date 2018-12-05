@@ -5,7 +5,7 @@ services:
     charly_news.fluxRss:
       class: CHARLY\NewsBundle\Controller\fluxRss
       arguments:
-        - ['https://web.developpez.com/index/rss', 'https://www.alsacreations.com/rss/actualites.xml']
+        - ['https://web.developpez.com/index/rss', 'https://www.alsacreations.com/rss/actualites.xml', 'https://www.it-connect.fr/feed/']
 
 #Si fonctionne pas dans app/service.yml
     #Tester

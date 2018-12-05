@@ -13,6 +13,10 @@ use Doctrine\ORM\Mapping as ORM;
 class Advert
 {
     /**
+     * @ORM\OneToOne(targetEntity="CHARLY\PlatformBundle\Entity\Image", cascade={"persist"})
+     */
+    private $image;
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")

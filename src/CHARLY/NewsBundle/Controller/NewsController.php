@@ -31,8 +31,8 @@ class NewsController extends Controller
 
         return $this->render('CHARLYNewsBundle:News:fluxRss.html.twig',array('flux' => $flux , 'limit' => $nbNew, 'description' => $description, 'article' => $article));
     }
-    public function viewAction($id, $article){
-        return $this->render('CHARLYNewsBundle:News:view.html.twig', array('flux' => $this->get('charly_news.fluxRss')->getArticle($id, $article)));
+    public function viewAction($id){
+        return $this->render('CHARLYNewsBundle:News:view.html.twig', array('flux' => $this->get('charly_news.fluxRss')->getActualite($id)));
     }
 
 }

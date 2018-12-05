@@ -2,20 +2,11 @@
 
 {% extends "CHARLYNewsBundle::layout.html.twig" %}
 
-{% block title %} Vue de l'article - {{ parent() }} {% endblock %}
-
-{% block menuBundle %}
-    <h3>Actualités</h3>
-    <ul class="nav nav-pills nav-stacked">
-        <li><a href="{{ path('charly_news_homepage') }}">Toutes l'actualités</a></li>
-        <li><a href="https://developper.com">developper.com</a></li>
-        <li><a href="https://www.alsacreations.com">alsacreations.com</a></li>
-    </ul>
-{% endblock %}
-
 {% block body %}
     <div class="maxWidth-child boxShadow" >
-    <h4>Article Complet : </h4>
-    {{ include('CHARLYNewsBundle:News:article.html.twig', {'flux': flux }) }}
+    <h4>Tous les articles de {{ flux.title }}</h4>
+       {% for article in flux.item %}
+           {{ include('CHARLYNewsBundle:News:article.html.twig', {'article': article }) }}
+        {% endfor %}
     </div>
 {% endblock %}

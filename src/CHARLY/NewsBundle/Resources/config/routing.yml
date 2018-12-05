@@ -4,9 +4,8 @@ charly_news_homepage:
     defaults:
         _controller: CHARLYNewsBundle:News:index
 charly_news_view:
-    path: /{id}/{article}
+    path: /{id}
     defaults:
         _controller: CHARLYNewsBundle:News:view
     requirements:
         id: \d+
-        article: \d+

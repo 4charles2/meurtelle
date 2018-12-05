@@ -68,6 +68,9 @@ class fluxRss
      * @return mixed
      */
     public function getArticle($id, $article){
-        return $this->flux[$id-1]['item'][$article-1];
+        return $this->flux[$id]['item'][$article];
+    }
+    public function getActualite($id){
+        return $this->flux[$id];
     }
 }

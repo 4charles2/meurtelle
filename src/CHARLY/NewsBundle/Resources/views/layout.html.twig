@@ -2,7 +2,24 @@
 
 {% extends "CHARLYCoreBundle::layout.html.twig" %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/style.css" />
+    {{ parent() }}
+{% endblock %}
+
 {% block title %} Actualite - {{ parent() }} {% endblock %}
+
+
 {% block bodyHeader %}
     <h1>Toute l'actualité pour les surfers</h1>
+{% endblock %}
+
+{% block menuBundle %}
+    <h3>Actualités</h3>
+    <ul class="nav nav-pills nav-stacked">
+        <li><a href="{{ path('charly_news_homepage') }}">Toutes l'actualités</a></li>
+        <li><a href="{{ path('charly_news_view', {id: 0}) }}" >developper.com</a></li>
+        <li><a href="{{ path('charly_news_view', {id: 1}) }}">alsacreations.com</a></li>
+        <li><a href="{{ path('charly_news_view', {id: 2}) }}">ItConnect.fr</a> </li>
+    </ul>
 {% endblock %}
