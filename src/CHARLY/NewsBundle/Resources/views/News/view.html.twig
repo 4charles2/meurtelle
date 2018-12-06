@@ -3,10 +3,12 @@
 {% extends "CHARLYNewsBundle::layout.html.twig" %}
 
 {% block body %}
-    <div class="maxWidth-child boxShadow" >
-    <h4>Tous les articles de {{ flux.title }}</h4>
+    <div class=" boxShadow" >
+    <h4 class="titleFluxArticle" style="text-align: center">Tous les articles de {{ flux.title }}</h4>
+    <div class="flexAround">
        {% for article in flux.item %}
-           {{ include('CHARLYNewsBundle:News:article.html.twig', {'article': article }) }}
+           {{ include('CHARLYNewsBundle:News:article.html.twig', {'article': article, 'index': loop.index }) }}
         {% endfor %}
+    </div>
     </div>
 {% endblock %}

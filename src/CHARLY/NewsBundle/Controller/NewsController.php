@@ -15,7 +15,8 @@ class NewsController extends Controller
 {
 
     public function indexAction(){
-        return $this->render('CHARLYNewsBundle:News:index.html.twig', array('url' => $this->get('charly_news.fluxRss')->getFlux()));
+
+        return $this->render('CHARLYNewsBundle:News:index.html.twig', array('flux' => $this->get('charly_news.fluxRss')->getFlux()));
     }
     /**
      * Renvoie un rendu des news de flux rss
@@ -27,10 +28,11 @@ class NewsController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function ReadRssAction($flux, $nbNew, $description, $article){
+
+    /*public function ReadRssAction($flux, $nbNew, $description, $article){
 
         return $this->render('CHARLYNewsBundle:News:fluxRss.html.twig',array('flux' => $flux , 'limit' => $nbNew, 'description' => $description, 'article' => $article));
-    }
+    }*/
     public function viewAction($id){
         return $this->render('CHARLYNewsBundle:News:view.html.twig', array('flux' => $this->get('charly_news.fluxRss')->getActualite($id)));
     }

@@ -60,7 +60,6 @@ class fluxRss
     public function getFlux(){
         return $this->flux;
     }
-
     /**
      * @param $id
      * @param $article

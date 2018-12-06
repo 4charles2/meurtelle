@@ -3,10 +3,16 @@
 {% extends 'CHARLYNewsBundle::layout.html.twig' %}
 
 {% block body %}
-        <div class="maxWidth-child boxShadow" >
-    <h4>Toutes l'actualités : </h4>
-    {% for flux in url %}
-        {{ render(controller('CHARLYNewsBundle:News:readRss', {'flux': flux, 'nbNew': 5, 'description': false, 'article': loop.index })) }}
-    {% endfor %}
-            </div>
+    <div class="boxShadow row" >
+        <h4 class="titleFluxArticle" >Toutes l'actualités : </h4>
+            {% for  items in flux %}
+                <h6 class="titleFluxArticle">{{ items.title }}</h6>
+                <div class="flexAround">
+                {% for article in items.item %}
+                    {{ include('CHARLYNewsBundle:News:article.html.twig', { 'article': article , 'index': loop.index } ) }}
+                {% endfor %}
+                </div>
+            {% endfor %}
+        {#{ render(controller('CHARLYNewsBundle:News:readRss', {'flux': flux, 'nbNew': 5, 'description': false, 'article': loop.index })) }#}
+    </div>
 {% endblock %}

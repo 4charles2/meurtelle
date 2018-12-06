@@ -1,8 +1,10 @@
 .container{
     background-color: #d7d7d7;
 }
-
-.maxWidth-child h4{
+.maxWidth-child * {
+    width: 100%;
+}
+.maxWidth-child h4, .titleFluxArticle{
     border: 1px solid black;
     border-radius: 5px 5px 0px 0px;
     padding: 5px;
@@ -12,9 +14,7 @@
 .maxWidth-child article{
     box-shadow: 2px 2px 2px black;
 }
-.maxWidth-child * {
-    width: 100%;
-}
+
 .boxShadow{
     box-shadow: 21px 22px 7px -23px black, -21px 24px 7px -23px black;
 }
@@ -33,9 +33,29 @@ nav{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
+#menuPlatform h3{
+    color: #B0413E;
+}
 #mainMenu li{
     background-color: rgba(255,255,255,0.2);
 }
 .btn-primary:hover {
     background-color: lightseagreen;
+}
+.panelArticle{
+    margin-bottom: 2px;
+    margin-right: 2px;
+    padding: 5px;
+    max-width : 433px;
+}
+.panelArticle .panel-heading{
+    border-color: #133333;
+}
+.panelArticle .panel-heading:hover{
+    background-color: #d7d7d7;
+}
+.flexAround{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
