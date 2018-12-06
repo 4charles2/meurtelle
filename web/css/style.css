@@ -59,3 +59,10 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.cadetBlue{
+    background-color : cadetblue;
+}
+.cadetBlue a {
+    color: black;
+}

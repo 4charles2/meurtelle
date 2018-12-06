@@ -21,7 +21,7 @@
                 <a href="{{ path('charly_news_homepage') }}" style="color: black">
             <article>
                 <h6> {{ news.title }} </h6>
-                <blockquote>
+                <blockquote class="cadetBlue">
                     <p>{{ news.description }} </p>
                     <cite>{{ news.link }} </cite>
                 </blockquote>
@@ -33,7 +33,9 @@
 <section class="col-lg-6 col-md-4">
     <div class="maxWidth-child boxShadow">
     <h4>Les 3 dernieres Offres d'emplois :</h4>
+        <div class="cadetBlue">
         {{ render(controller('CHARLYPlatformBundle:Advert:menu', {'limit': 3})) }}
+        </div>
     </div>
 </section>
 {% endblock %}
