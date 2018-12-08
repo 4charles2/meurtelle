@@ -42,6 +42,9 @@ class Application
      */
     private $date;
 
+    public function __construct() {
+        $this->setDate(new \DateTime());
+    }
 
     /**
      * Get id
@@ -108,7 +111,7 @@ class Application
      *
      * @return Application
      */
-    public function setDate($date)
+    public function setDate(\DateTime $date)
     {
         $this->date = $date;
     

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2731a7ba-b5bb-4c46-a49d-7e2c3b28f9d6" name="Default Changelist" comment="from wave img for surfeur and view advert position img left title">
-      <change afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/image/symfony.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/image/webdesigner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/image/webmaster.png" afterDir="false" />
+    <list default="true" id="2731a7ba-b5bb-4c46-a49d-7e2c3b28f9d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/menu.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/menu.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +17,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5976027">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.47875354">
+        <splitter split-orientation="vertical" split-proportion="0.8286119">
           <split-first>
             <leaf>
               <file pinned="false" current-in-tab="false">
@@ -47,7 +41,15 @@
               </file>
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php">
-                  <provider selected="true" editor-type-id="text-editor" />
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="196">
+                      <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+                      <folding>
+                        <element signature="e#82#230#0#PHP" expanded="true" />
+                        <element signature="e#1794#1901#0#PHP" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
                 </entry>
               </file>
             </leaf>
@@ -200,6 +202,7 @@
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/index.html.twig" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/menu.html.twig" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" />
+        <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php" />
       </list>
     </option>
   </component>
@@ -494,7 +497,7 @@
       <workItem from="1542709814530" duration="433000" />
       <workItem from="1542711273719" duration="16526000" />
       <workItem from="1542804662772" duration="25225000" />
-      <workItem from="1544032398408" duration="59781000" />
+      <workItem from="1544032398408" duration="60002000" />
     </task>
     <task id="LOCAL-00001" summary="create repository Vcs git for project symfony with OpenClassroom">
       <created>1542209791663</created>
@@ -580,17 +583,24 @@
       <option name="project" value="LOCAL" />
       <updated>1544230273801</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="use entity for display adverts from advertController">
+      <created>1544286466590</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1544286466590</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197559000" />
+    <option name="totallyTimeSpent" value="197780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21610738" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21610738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -700,7 +710,8 @@
     <MESSAGE value="create animate css surfeur in header still in work" />
     <MESSAGE value="finish surfer create property repository in AdvertController" />
     <MESSAGE value="from wave img for surfeur and view advert position img left title" />
-    <option name="LAST_COMMIT_MESSAGE" value="from wave img for surfeur and view advert position img left title" />
+    <MESSAGE value="use entity for display adverts from advertController" />
+    <option name="LAST_COMMIT_MESSAGE" value="use entity for display adverts from advertController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1050,7 +1061,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+          <folding>
+            <element signature="e#82#230#0#PHP" expanded="true" />
+            <element signature="e#1794#1901#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
