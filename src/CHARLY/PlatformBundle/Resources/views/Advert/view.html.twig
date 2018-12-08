@@ -5,13 +5,18 @@
 {% block title %} Vue de l'annonce - {{ parent() }} {% endblock %}
 
 {% block charlyPlatform_body %}
-    <h2>{{ advert.title }}</h2>
-    <cite>Par {{ advert.author }}, Le {{ advert.date|date('d/m/Y') }}</cite>
 
-    <div class="well">
+    <div>
         {% if advert.image is not null %}
             <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}">
         {% endif %}
+        <div>
+            <h2>{{ advert.title }}</h2>
+                <cite>Par {{ advert.author }}, Le {{ advert.date|date('d/m/Y') }}</cite>
+        </div>
+    </div>
+    <div class="well">
+
         {{ advert.content }}
     </div>
     <p>
