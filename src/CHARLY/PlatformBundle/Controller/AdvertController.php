@@ -31,7 +31,7 @@ class AdvertController extends Controller
     function __construct(){
         //https://emploi.alsacreations.com/offres.xml
 
-        $this->listAdverts = array(
+       /* $this->listAdverts = array(
             array(
                 'title' => 'Recherche developpeur Symfony',
                 'id' => '1',
@@ -50,7 +50,7 @@ class AdvertController extends Controller
                 'author' => 'Mathieu',
                 'content' => 'Nous recherchons un webdesigner',
                 'date' => new \DateTime())
-        );
+        );*/
 
     }
 
@@ -60,25 +60,16 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      */
     function indexAction(){
-        $this->repository = $this->getDoctrine()
+        //Decommenter pour persister les annonces dans la base sql avec les images
+        //$this->sendAdvert();
+
+        $adverts = $this->getDoctrine()
             ->getManager()
             ->getRepository('CHARLYPlatformBundle:Advert')
-        ;
-        $i = 0;
-        $em = $this->getDoctrine()->getManager();
-        $ad = 0;
-        while($i <= 2) {
-            $ad = $this->listAdverts[$i];
-            $advert[$i] = new Advert();
-            $advert[$i]->setAuthor($ad->author);
-            $advert[$i]->setContent($ad->content);
-            $advert[$i]->getTitle($ad->title);
-            $em->persist($advert[$i]);
-            $i++;
-        }
-        $em->flush();
+            ->findAll();
+
         return $this->render('CHARLYPlatformBundle:Advert:index.html.twig',
-            array('listAdverts' => $this->listAdverts)
+            array('listAdverts' => $adverts)
             );
     }
 
@@ -189,12 +180,54 @@ class AdvertController extends Controller
     function menuAction($limit){
         $anytime =  $limit;
 
-        $listAdverts = array(
-            array('id' => 2, 'title' => 'Recherche developper symfony'),
-            array('id' => 5, 'title' => 'Mission de webmaster'),
-            array('id' => 9, 'title' => 'Offre Stage de webdesigner')
-        );
+        $listAdverts = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('CHARLYPlatformBundle:Advert')
+            ->findAll();
+        $adverts = null;
+        for($i = 0, $x = sizeof($listAdverts)-1; $i < $limit; $i++, $x--)
+            $adverts[] = $listAdverts[$x];
 
-        return $this->render('CHARLYPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $listAdverts));
+        return $this->render('CHARLYPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $adverts));
+    }
+
+    function sendAdvert(){
+        $this->repository = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('CHARLYPlatformBundle:Advert')
+        ;
+        $i = 0;
+        $em = $this->getDoctrine()->getManager();
+        $ad = $this->listAdverts;
+        $urlImgs = [
+            [
+                'url' => "/image/symfony.jpg",
+                'alt' => 'logo symfony'
+            ],
+            [
+                "url" => "/image/webmaster.png",
+                'alt' => "logo webmaster"
+            ],
+            [
+                'url' => "/image/webdesigner.jpg",
+                'alt' => 'logo webdesigner'
+            ]
+        ];
+        while($i <= 2) {
+            $image = new Image();
+            $image->setUrl($urlImgs[$i]['url']);
+            $image->setAlt($urlImgs[$i]['alt']);
+
+            $advert[$i] = new Advert();
+            $advert[$i]->setAuthor($ad[$i]['author']);
+            $advert[$i]->setContent($ad[$i]['content']);
+            $advert[$i]->setTitle($ad[$i]['title']);
+            $advert[$i]->setImage($image);
+
+
+            $em->persist($advert[$i]);
+            $i++;
+        }
+        $em->flush();
     }
 }

@@ -12,13 +12,13 @@
         {% for advert in listAdverts %}
 
                 <li class="liAdvert" style="list-style-type: none; border: 1px solid darkslategray; margin-bottom: 20px; padding: 20px">
+                    <img src="{{ advert.image.getUrl }}" alt="{{ advert.image.getAlt }}" width="50px">
                     <a href={{ path('charly_platform_view',{'id': advert.id}) }}>
                         {{ advert.title }}
                     </a>
                     par {{ advert.author }},
                     Le {{ advert.date|date('d/m/Y') }}.
-                       </li>
-
+                </li>
 
         {% else %}
             <li class="liAdvert" style="border: 2px solid darkslategray; margin-bottom: 20px">Pas encore d'annonce en ligne <a href="{{ path('charly_platform_add') }}">Ajouter la votre</a></li>
