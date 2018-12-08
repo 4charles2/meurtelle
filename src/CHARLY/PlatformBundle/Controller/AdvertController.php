@@ -10,6 +10,7 @@ namespace CHARLY\PlatformBundle\Controller;
 
 
 use CHARLY\PlatformBundle\Entity\Advert;
+use CHARLY\PlatformBundle\Entity\Image;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -25,9 +26,11 @@ class AdvertController extends Controller
 {
     protected $arrayOut = array('nom' => 'Charles');
     protected $listAdverts = null;
+    private $repository = null;
 
     function __construct(){
         //https://emploi.alsacreations.com/offres.xml
+
         $this->listAdverts = array(
             array(
                 'title' => 'Recherche developpeur Symfony',
@@ -48,6 +51,7 @@ class AdvertController extends Controller
                 'content' => 'Nous recherchons un webdesigner',
                 'date' => new \DateTime())
         );
+
     }
 
     /**
@@ -56,7 +60,23 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      */
     function indexAction(){
-
+        $this->repository = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('CHARLYPlatformBundle:Advert')
+        ;
+        $i = 0;
+        $em = $this->getDoctrine()->getManager();
+        $ad = 0;
+        while($i <= 2) {
+            $ad = $this->listAdverts[$i];
+            $advert[$i] = new Advert();
+            $advert[$i]->setAuthor($ad->author);
+            $advert[$i]->setContent($ad->content);
+            $advert[$i]->getTitle($ad->title);
+            $em->persist($advert[$i]);
+            $i++;
+        }
+        $em->flush();
         return $this->render('CHARLYPlatformBundle:Advert:index.html.twig',
             array('listAdverts' => $this->listAdverts)
             );
@@ -70,11 +90,8 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      */
     function viewAction($id){
-        $repository = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('CHARLYPlatformBundle:Advert')
-        ;
-        $advert = $repository->find($id);
+
+        $advert = $this->repository->find($id);
         if(null === $advert)
             throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
         
@@ -130,6 +147,14 @@ class AdvertController extends Controller
         $advert->setContent("Nous recherchons un developpeur symfony débutant sur Lyon. Blabla... ");
         //On ne peut définir ni la date ni la publication; ??
         //car ces attributs sont définis automatiquement dans le constructeur
+
+        //On crer notre entities image
+        $image = new Image();
+        $image->setUrl("http://sdz-upload.s3.amazonaws.com/prod/upload/job-de-reve.jpg");
+        $image->setAlt("Job de reve");
+
+        //On lie l'image a l'entities advert
+        $advert->setImage($image);
 
         //On récupere l'entityManager
         $em = $this->getDoctrine()->getManager();

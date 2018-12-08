@@ -198,4 +198,20 @@ class Advert
     {
         return $this->published;
     }
+    /**
+     * Set Image
+     *
+     * @param Imagem image
+     */
+    function setImage(Image $image = NULL){
+        $this->image = $image;
+    }
+    /**
+     * Get image
+     *
+     * @return image
+     */
+    public function getImage(){
+        return $this->image;
+    }
 }

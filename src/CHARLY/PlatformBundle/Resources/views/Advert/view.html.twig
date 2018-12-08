@@ -9,6 +9,9 @@
     <cite>Par {{ advert.author }}, Le {{ advert.date|date('d/m/Y') }}</cite>
 
     <div class="well">
+        {% if advert.image is not null %}
+            <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}">
+        {% endif %}
         {{ advert.content }}
     </div>
     <p>

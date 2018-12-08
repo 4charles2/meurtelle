@@ -1,8 +1,10 @@
 /*
  * Copyright (c) 2018. Toute reproduction ou utilisation est interdite sans l'accord de l'auteur
  *  \web\css\animSurfer.css
+    pour fonctionner fichier surfer.html est necessaire
  */
 #containAnim{
+    filter: blur(0.5px);
     position: relative;
     top: -33px;
     width: 150px;
@@ -13,6 +15,7 @@
     -webkit-animation-timing-function : ease-in;-moz-animation-timing-function : linear;-o-animation-timing-function : linear;animation-timing-function : linear;
     -webkit-animation-delay : 0s;-moz-animation-delay : 0s;-o-animation-delay : 0s;animation-delay : 0s;
     -webkit-animation-iteration-count : infinite;-moz-animation-iteration-count : infinite;-o-animation-iteration-count : infinite;animation-iteration-count : infinite;
+
 }
 
 
@@ -20,21 +23,31 @@
 
 
 #surfer{
+    -webkit-animation-name : surfer;-moz-animation-name : surfer;-o-animation-name : surfer;animation-name : surfer;
 
+    -webkit-animation-duration : 1s;-moz-animation-duration : 1s;-o-animation-duration : 1s;animation-duration : 1s;
+
+    -webkit-animation-timing-function : ease-in;-moz-animation-timing-function : linear;-o-animation-timing-function : linear;animation-timing-function : linear;
+
+    -webkit-animation-delay : 0s;-moz-animation-delay : 0s;-o-animation-delay : 0s;animation-delay : 0s;
+
+    -webkit-animation-iteration-count : infinite;-moz-animation-iteration-count : infinite;-o-animation-iteration-count : infinite;animation-iteration-count : infinite;
 }
 #perso{
 
 }
 #cheveu{
+    z-index: 1;
     position: relative;
     top: 30px;
     left: 35px;
     height: 50px;
     width: 65px;
     background-color: #916319;
-    clip-path: polygon(16% 61%, 21% 45%, 36% 27%, 55% 15%, 93% 38%, 97% 54%, 100% 100%, 90% 66%, 75% 48%, 56% 40%, 35% 51%, 15% 100%);
+    clip-path: polygon(16% 61%, 21% 45%, 36% 27%, 55% 19%,75% 23%,93% 38%, 97% 54%, 100% 100%, 90% 66%, 75% 48%, 56% 40%, 35% 51%, 15% 100%);
 }
 #visage{
+    z-index: 0;
     position : relative;
     left : 28%;
     height : 33px;
@@ -80,11 +93,6 @@
     background-color: cadetblue;
     clip-path: polygon(34% 0, 73% 0, 82% 49%, 79% 100%, 60% 100%, 64% 59%, 59% 27%, 51% 31%, 46% 56%, 42% 100%, 21% 100%, 24% 58%);
 }
-#pied{
-
-}
-
-
 
 #planche{
     height : 20px;
@@ -95,19 +103,32 @@
     position:relative;
     top: -78px;
     height : 75px;
-
     background-color : #0088CC;
+    background-image: url("/image/vague.jpg");
     clip-path: polygon(100% 100%, 0 100%, 24% 92%, 39% 83%, 38% 72%, 29% 66%, 18% 70%, 23% 55%, 39% 53%, 53% 60%, 71% 75%, 100% 79%);
+    background-position: top;
 }
 
 @keyframes contain {
     0%{
-
+        transform: scaleX(1);
+    }
+    49.9%{
+        transform: translate(-149%, 0) scaleX(1);
     }
     50%{
-        transform: translate(-150%, 0);
+        transform: translate(-150%, 0) scaleX(-1);
     }
     100%{
-
+        transform: scaleX(-1);
     }
 }
+
+@keyframes surfer {
+    50%{
+        transform: translate(1%, 1%);
+    }
+}/*
+ * Copyright (c) 2018. Toute reproduction ou utilisation est interdite sans l'accord de l'auteur
+ *  \web\css\animSurfer.css
+ */
