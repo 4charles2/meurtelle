@@ -7,17 +7,36 @@
 {% block charlyPlatform_body %}
 
     <div>
+        <div style="display: flex; background-color: #cccccc">
         {% if advert.image is not null %}
-            <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}">
+            <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}" width="10%">
         {% endif %}
-        <div>
-            <h2>{{ advert.title }}</h2>
+            <div style="padding-left: 13px; padding-bottom: 13px;">
+                <h2>{{ advert.title }}</h2>
                 <cite>Par {{ advert.author }}, Le {{ advert.date|date('d/m/Y') }}</cite>
+            </div>
         </div>
     </div>
     <div class="well">
 
         {{ advert.content }}
+    </div>
+    <div id="containAppli">
+    {% if listApplication is not null %}
+        <h3>Candidatures à l'offre d'emplois</h3>
+    {% endif %}
+    {% for application in listApplication %}
+        <div class="application">
+            <p>{{ application.getContent }}</p>
+            <p>
+                {{ application.getAuthor }}
+                {{ application.getDate|date('d/m/Y') }}
+            </p>
+        </div>
+    {% endfor %}
+    </div>
+    <div>
+
     </div>
     <p>
         <a href="{{ path('charly_platform_homepage') }} " class="btn btn-default">

@@ -4,7 +4,7 @@
     {% for advert in listAdverts %}
         <li style="margin-top: 15px;">
             <a href="{{ path('charly_platform_view', {id: advert.id}) }}">
-                <img src="{{ advert.image.getUrl }}" alt="{{ advert.image.getAlt }}" style="max-width: 50px" >
+                {# <img src="{{ advert.image.getUrl }}" alt="{{ advert.image.getAlt }}" style="max-width: 50px" > #}
                 {{ advert.title }}
             </a>
         </li>

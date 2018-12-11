@@ -10,6 +10,7 @@ namespace CHARLY\PlatformBundle\Controller;
 
 
 use CHARLY\PlatformBundle\Entity\Advert;
+use CHARLY\PlatformBundle\Entity\Application;
 use CHARLY\PlatformBundle\Entity\Image;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,7 +27,6 @@ class AdvertController extends Controller
 {
     protected $arrayOut = array('nom' => 'Charles');
     protected $listAdverts = null;
-    private $repository = null;
 
     function __construct(){
         //https://emploi.alsacreations.com/offres.xml
@@ -81,14 +81,20 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      */
     function viewAction($id){
+        $em = $this->getDoctrine()->getManager();
 
-        $advert = $this->repository->find($id);
+        $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->find($id);
+
         if(null === $advert)
             throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
-        
+
+        //ON recupere la liste des candidatures de cette annoncez
+        $candidatures = $em->getRepository('CHARLYPlatformBundle:Application')
+                    ->findBy(array('advert' => $advert));
+
         return $this->render(
             'CHARLYPlatformBundle:Advert:view.html.twig',
-            array("advert" => $advert)
+            array("advert" => $advert, 'listApplication' => $candidatures)
         );
     }
 
@@ -133,16 +139,16 @@ class AdvertController extends Controller
     function addAction(Request $request){
         //Création de l'entité
         $advert = new Advert();
-        $advert->setTitle("Recherche développeur Symfony.");
-        $advert->setAuthor("Alexandre");
-        $advert->setContent("Nous recherchons un developpeur symfony débutant sur Lyon. Blabla... ");
+        $advert->setTitle("Developpeur Web full Stack");
+        $advert->setAuthor("Charles");
+        $advert->setContent("recherche un developpeur full stack PHP Javascript Html5 Css3");
         //On ne peut définir ni la date ni la publication; ??
         //car ces attributs sont définis automatiquement dans le constructeur
 
         //On crer notre entities image
         $image = new Image();
-        $image->setUrl("http://sdz-upload.s3.amazonaws.com/prod/upload/job-de-reve.jpg");
-        $image->setAlt("Job de reve");
+        $image->setUrl("/image/devFullStack.jpg");
+        $image->setAlt("dev Full Stack");
 
         //On lie l'image a l'entities advert
         $advert->setImage($image);
@@ -155,7 +161,25 @@ class AdvertController extends Controller
 
         //Étape 2 : On flush tout ce qui a été persité avant
         $em->flush();
+        //Création de personne qui ont repondu aux offre d'emplois
+        $reponse[0] =  new Application();
+        $reponse[0]->setContent("Votre Offre correspond en tous points à ce que je recherche Tous mon savoir faire à votre service ");
+        $reponse[0]->setAuthor("anonymous");
 
+        $reponse[1] = new Application();
+        $reponse[1]->setContent("la qualité de vos services accompagner de ma motivation ferons des etincelles");
+        $reponse[1]->setAuthor("motidev");
+
+        $reponse[2] = new Application();
+        $reponse[2]->setAuthor("stagiaire");
+        $reponse[2]->setContent("Je veus bien faire un stage chez vous mais je veux 1500 €");
+
+        for($i = 0; $i < sizeof($reponse); $i++) {
+            $em->persist($reponse[$i]);
+            $reponse[$i]->setAdvert($advert);
+        }
+        $em->flush();
+        
         //Reste de la méthode qu'on avait déjà écrit
 
         //Si requete est en POST c'est que l'user a up the Form
@@ -178,13 +202,13 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      */
     function menuAction($limit){
-        $anytime =  $limit;
 
         $listAdverts = $this->getDoctrine()
             ->getManager()
             ->getRepository('CHARLYPlatformBundle:Advert')
             ->findAll();
         $adverts = null;
+        //Parcour les annonces en partant de la fin pour ne garder que les trois dernières
         for($i = 0, $x = sizeof($listAdverts)-1; $i < $limit; $i++, $x--)
             $adverts[] = $listAdverts[$x];
 
