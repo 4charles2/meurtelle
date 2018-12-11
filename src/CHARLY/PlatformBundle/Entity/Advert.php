@@ -2,6 +2,7 @@
 
 namespace CHARLY\PlatformBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -12,10 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Advert
 {
-    /**
-     * @ORM\OneToOne(targetEntity="CHARLY\PlatformBundle\Entity\Image", cascade={"persist"})
-     */
-    private $image;
+
     /**
      * @var int
      *
@@ -25,6 +23,16 @@ class Advert
      */
     private $id;
 
+    /**
+     * @ORM\OneToOne(targetEntity="CHARLY\PlatformBundle\Entity\Image", cascade={"persist"})
+     */
+    private $image;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="CHARLY\PlatformBundle\Entity\Category", cascade={"persist"})
+     * @ORM\JoinTable(name="CHARLY_advert_category")
+     */
+    private $categories;
     /**
      * @var \DateTime
      *
@@ -67,6 +75,7 @@ class Advert
         //Par default la date de l'annonce et la date d'aujourd'hui
         $this->published = True;
         $this->date = new \Datetime();
+        $this->categories = new ArrayCollection();
 }
 
     /**
@@ -213,5 +222,42 @@ class Advert
      */
     public function getImage(){
         return $this->image;
+    }
+
+    /**
+     * Add category
+     *
+     * @param \CHARLY\PlatformBundle\Entity\Category $category
+     *
+     * @return Advert
+     */
+    public function addCategory(Category $category)
+    {
+        //On ajoute une seul category a la fois
+        $this->categories[] = $category;
+    
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \CHARLY\PlatformBundle\Entity\Category $category
+     */
+    public function removeCategory(Category $category)
+    {
+        //Ici on utilise une méthode de l'arrayCollection, pour supprimer la catégorie en argument
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        //On à mit Catégories aux pluriels car on récupére une liste de catégories ici !
+        return $this->categories;
     }
 }

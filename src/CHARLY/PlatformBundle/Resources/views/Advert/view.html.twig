@@ -21,20 +21,27 @@
 
         {{ advert.content }}
     </div>
-    <div id="containAppli">
-    {% if listApplication is not null %}
-        <h3>Candidatures à l'offre d'emplois</h3>
+
+        <div id="containAppli">
+            <h3>
+    {% if listApplication %}
+        Candidatures à l'offre d'emplois
+    {% else %}
+        Encore pas de candidature
     {% endif %}
+            </h3>
     {% for application in listApplication %}
         <div class="application">
             <p>{{ application.getContent }}</p>
             <p>
-                {{ application.getAuthor }}
+                {{ application.getAuthor }} Le :
                 {{ application.getDate|date('d/m/Y') }}
             </p>
         </div>
     {% endfor %}
     </div>
+
+
     <div>
 
     </div>

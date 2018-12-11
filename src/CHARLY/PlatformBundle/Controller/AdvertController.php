@@ -31,7 +31,7 @@ class AdvertController extends Controller
     function __construct(){
         //https://emploi.alsacreations.com/offres.xml
 
-       /* $this->listAdverts = array(
+        /*$this->listAdverts = array(
             array(
                 'title' => 'Recherche developpeur Symfony',
                 'id' => '1',
@@ -213,6 +213,7 @@ class AdvertController extends Controller
             $adverts[] = $listAdverts[$x];
 
         return $this->render('CHARLYPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $adverts));
+
     }
 
     function sendAdvert(){
