@@ -11,21 +11,16 @@
 
 namespace Symfony\Bridge\PhpUnit\TextUI;
 
-use Symfony\Bridge\PhpUnit\SymfonyTestsListener;
+if (class_exists('PHPUnit_Runner_Version') && version_compare(\PHPUnit_Runner_Version::id(), '6.0.0', '<')) {
+    class_alias('Symfony\Bridge\PhpUnit\Legacy\TestRunnerForV5', 'Symfony\Bridge\PhpUnit\TextUI\TestRunner');
+} elseif (version_compare(\PHPUnit\Runner\Version::id(), '7.0.0', '<')) {
+    class_alias('Symfony\Bridge\PhpUnit\Legacy\TestRunnerForV6', 'Symfony\Bridge\PhpUnit\TextUI\TestRunner');
+} else {
+    class_alias('Symfony\Bridge\PhpUnit\Legacy\TestRunnerForV7', 'Symfony\Bridge\PhpUnit\TextUI\TestRunner');
+}
 
-/**
- * {@inheritdoc}
- */
-class TestRunner extends \PHPUnit_TextUI_TestRunner
-{
-    /**
-     * {@inheritdoc}
-     */
-    protected function handleConfiguration(array &$arguments)
+if (false) {
+    class TestRunner
     {
-        $arguments['listeners'] = isset($arguments['listeners']) ? $arguments['listeners'] : array();
-        $arguments['listeners'][] = new SymfonyTestsListener();
-
-        return parent::handleConfiguration($arguments);
     }
 }

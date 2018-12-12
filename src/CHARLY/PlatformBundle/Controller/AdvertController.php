@@ -26,33 +26,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 class AdvertController extends Controller
 {
     protected $arrayOut = array('nom' => 'Charles');
-    protected $listAdverts = null;
-
-    function __construct(){
-        //https://emploi.alsacreations.com/offres.xml
-
-        /*$this->listAdverts = array(
-            array(
-                'title' => 'Recherche developpeur Symfony',
-                'id' => '1',
-                'author' => 'Alexandre',
-                'content' => 'Nous recherchons un developpeur Symfony sur Lyon',
-                'date' => new \DateTime()),
-            array(
-                'title' => 'Mission de webmaster',
-                'id' => '2',
-                'author' => 'Hugo',
-                'content' => 'Nous recherchon un webmaster capable de maintenir notre site internet',
-                'date' => new \DateTime()),
-            array(
-                'title' => 'Offre stage de webdesigner',
-                'id' => '3',
-                'author' => 'Mathieu',
-                'content' => 'Nous recherchons un webdesigner',
-                'date' => new \DateTime())
-        );*/
-
-    }
 
     /**
      * Page d'acceuil de la partie offer d'emplois
@@ -137,50 +110,6 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     function addAction(Request $request){
-        //Création de l'entité
-        $advert = new Advert();
-        $advert->setTitle("Developpeur Web full Stack");
-        $advert->setAuthor("Charles");
-        $advert->setContent("recherche un developpeur full stack PHP Javascript Html5 Css3");
-        //On ne peut définir ni la date ni la publication; ??
-        //car ces attributs sont définis automatiquement dans le constructeur
-
-        //On crer notre entities image
-        $image = new Image();
-        $image->setUrl("/image/devFullStack.jpg");
-        $image->setAlt("dev Full Stack");
-
-        //On lie l'image a l'entities advert
-        $advert->setImage($image);
-
-        //On récupere l'entityManager
-        $em = $this->getDoctrine()->getManager();
-
-        //Étape 1 : on persiste l'entité
-        $em->persist($advert);
-
-        //Étape 2 : On flush tout ce qui a été persité avant
-        $em->flush();
-        //Création de personne qui ont repondu aux offre d'emplois
-        $reponse[0] =  new Application();
-        $reponse[0]->setContent("Votre Offre correspond en tous points à ce que je recherche Tous mon savoir faire à votre service ");
-        $reponse[0]->setAuthor("anonymous");
-
-        $reponse[1] = new Application();
-        $reponse[1]->setContent("la qualité de vos services accompagner de ma motivation ferons des etincelles");
-        $reponse[1]->setAuthor("motidev");
-
-        $reponse[2] = new Application();
-        $reponse[2]->setAuthor("stagiaire");
-        $reponse[2]->setContent("Je veus bien faire un stage chez vous mais je veux 1500 €");
-
-        for($i = 0; $i < sizeof($reponse); $i++) {
-            $em->persist($reponse[$i]);
-            $reponse[$i]->setAdvert($advert);
-        }
-        $em->flush();
-        
-        //Reste de la méthode qu'on avait déjà écrit
 
         //Si requete est en POST c'est que l'user a up the Form
         if($request->isMethod('POST')) {
@@ -216,43 +145,4 @@ class AdvertController extends Controller
 
     }
 
-    function sendAdvert(){
-        $this->repository = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('CHARLYPlatformBundle:Advert')
-        ;
-        $i = 0;
-        $em = $this->getDoctrine()->getManager();
-        $ad = $this->listAdverts;
-        $urlImgs = [
-            [
-                'url' => "/image/symfony.jpg",
-                'alt' => 'logo symfony'
-            ],
-            [
-                "url" => "/image/webmaster.png",
-                'alt' => "logo webmaster"
-            ],
-            [
-                'url' => "/image/webdesigner.jpg",
-                'alt' => 'logo webdesigner'
-            ]
-        ];
-        while($i <= 2) {
-            $image = new Image();
-            $image->setUrl($urlImgs[$i]['url']);
-            $image->setAlt($urlImgs[$i]['alt']);
-
-            $advert[$i] = new Advert();
-            $advert[$i]->setAuthor($ad[$i]['author']);
-            $advert[$i]->setContent($ad[$i]['content']);
-            $advert[$i]->setTitle($ad[$i]['title']);
-            $advert[$i]->setImage($image);
-
-
-            $em->persist($advert[$i]);
-            $i++;
-        }
-        $em->flush();
-    }
 }
