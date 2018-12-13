@@ -6,6 +6,9 @@
 
 
 {% block charlyPlatform_body %}
+    {% for msg in app.session.flashbag.get('info') %}
+        <div class="alert alert-danger" role="alert">Message Flash : {{ msg }}</div>
+    {% endfor %}
     <h2>Liste des annonces !</h2>
     <section>
         <ul class="containAdvert" >

@@ -21,7 +21,15 @@
 
         {{ advert.content }}
     </div>
-
+    <div>
+        {% if not advert.getCategories.empty %}
+            <p>Cette annonce est parue dans les  categories suivantes :
+            {% for categorie in advert.getCategories %}
+                {{ categorie.name }} {% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+        {% endif %}
+    </div>
         <div id="containAppli">
             <h3>
     {% if listApplication %}

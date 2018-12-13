@@ -12,6 +12,7 @@ namespace CHARLY\PlatformBundle\Controller;
 use CHARLY\PlatformBundle\Entity\Advert;
 use CHARLY\PlatformBundle\Entity\Application;
 use CHARLY\PlatformBundle\Entity\Image;
+use mysql_xdevapi\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -80,13 +81,24 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     function editAction(Request $request, $id){
+        $em = $this->getDoctrine()->getManager();
 
+        $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->find($id);
+        $listCategorys = $em->getRepository('CHARLYPlatformBundle:Category')->findAll();
+
+        if($advert === null)
+            throw new NotFoundHttpException("L'annonce ".$id." n'héxiste pas !");
+
+        foreach ($listCategorys as $category){
+            $advert->addCategory($category);
+        }
+        $em->flush();
         if($request->isMethod('POST')){
             $this->addFlash('info', 'Votre annonce à bien été modifié');
 
             return $this->redirectToRoute('charly_platform_view', array('id' => $id));
         }
-        return $this->render('CHARLYPlatformBundle:Advert:edit.html.twig', array('advert' => $this->listAdverts[$id-1]));
+        return $this->render('CHARLYPlatformBundle:Advert:edit.html.twig', array('advert' => $advert));
     }
 
     /**
@@ -97,9 +109,21 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      */
     function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->find($id);
+
+        if ($advert->getCategories() ===  Null)
+            throw new NotFoundHttpException('Cette annonce ne possede pas de category !');
+
+        foreach ($advert->getCategories() as $category)
+            $advert->removeCategory($category);
+
+        $em->flush();
+
         $this->addFlash('info', 'Votre annonce à bien été suprimer');
-        unset($this->listAdverts[$id-1]);
-        return $this->render('CHARLYPlatformBundle:Advert:delete.html.twig', array('id' => $id));
+
+        return $this->forward('CHARLYPlatformBundle:Advert:index');
+        return $this->render('CHARLYPlatformBundle:Advert:index.html.twig', array('id' => $id));
     }
 
     /**

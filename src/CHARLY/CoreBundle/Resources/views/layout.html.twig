@@ -58,6 +58,9 @@
         <section id="content" class="col-lg-10 col-sm-10">
             <main>
                 {% block body %}
+                    {% for msg in app.session.flashbag.get('info') %}
+                        <div class="alert alert-danger" role="alert">Message Flash : {{ msg }}</div>
+                    {% endfor %}
 
                 {% endblock %}
             </main>

@@ -30,7 +30,6 @@ class Advert
 
     /**
      * @ORM\ManyToMany(targetEntity="CHARLY\PlatformBundle\Entity\Category", cascade={"persist"})
-     * @ORM\JoinTable(name="CHARLY_advert_category")
      */
     private $categories;
     /**

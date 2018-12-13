@@ -11,9 +11,7 @@
 {% endblock %}
 
  {% block body %}
-     {% for msg in app.session.flashbag.get('info') %}
-         <div class="alert alert-danger" role="alert">Message Flash : {{ msg }}</div>
-     {% endfor %}
+
 <section class="col-lg-6 col-md-4" >
     <div class="maxWidth-child boxShadow" >
     <h4>Les Toutes dernieres actualités : </h4>
