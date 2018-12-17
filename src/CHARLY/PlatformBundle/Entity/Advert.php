@@ -32,6 +32,12 @@ class Advert
      * @ORM\ManyToMany(targetEntity="CHARLY\PlatformBundle\Entity\Category", cascade={"persist"})
      */
     private $categories;
+
+    /**
+     * @ORM\OneToMany(targetEntity="CHARLY\PlatformBundle\Entity\Application", mappedBy="advert")
+     */
+    private $applications;
+
     /**
      * @var \DateTime
      *
@@ -75,6 +81,7 @@ class Advert
         $this->published = True;
         $this->date = new \Datetime();
         $this->categories = new ArrayCollection();
+        $this->applications = new ArrayCollection();
 }
 
     /**
@@ -258,5 +265,39 @@ class Advert
     {
         //On à mit Catégories aux pluriels car on récupére une liste de catégories ici !
         return $this->categories;
+    }
+
+    /**
+     * Add application
+     *
+     * @param Application $application
+     *
+     * @return Advert
+     */
+    public function addApplication(Application $application)
+    {
+        $this->applications[] = $application;
+        $application->setAdvert($this);
+        return $this;
+    }
+
+    /**
+     * Remove application
+     *
+     * @param Application $application
+     */
+    public function removeApplication(Application $application)
+    {
+        $this->applications->removeElement($application);
+    }
+
+    /**
+     * Get applications
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getApplications()
+    {
+        return $this->applications;
     }
 }

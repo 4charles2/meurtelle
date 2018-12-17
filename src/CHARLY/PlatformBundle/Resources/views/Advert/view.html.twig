@@ -21,15 +21,26 @@
 
         {{ advert.content }}
     </div>
-    <div>
+    <div class="text-info">
         {% if not advert.getCategories.empty %}
             <p>Cette annonce est parue dans les  categories suivantes :
             {% for categorie in advert.getCategories %}
-                {{ categorie.name }} {% if not loop.last %}, {% endif %}
+                <span style="color: white">{{ categorie.name }}</span> {% if not loop.last %}, {% endif %}
                 {% endfor %}
             </p>
         {% endif %}
+
     </div>
+    {% if listSkills|length > 0 %}
+        <div >
+            <p style="color: white">Cette annonce requiert les compétences suivantes : </p>
+            <ul class="list-inline" style="background-color: #d9d9d9; padding: 10px">
+            {% for  advertSkill in listSkills %}
+                <li style="margin-left: 12px"><strong>{{ advertSkill.skill.name }}</strong> : niveau <span style="color: #a4403b"> {{ advertSkill.level }}</span></li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
         <div id="containAppli">
             <h3>
     {% if listApplication %}
@@ -39,7 +50,7 @@
     {% endif %}
             </h3>
     {% for application in listApplication %}
-        <div class="application">
+        <div class="application" style="border-radius: 10px 0px">
             <p>{{ application.getContent }}</p>
             <p>
                 {{ application.getAuthor }} Le :

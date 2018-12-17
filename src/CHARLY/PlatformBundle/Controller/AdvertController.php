@@ -10,6 +10,7 @@ namespace CHARLY\PlatformBundle\Controller;
 
 
 use CHARLY\PlatformBundle\Entity\Advert;
+use CHARLY\PlatformBundle\Entity\AdvertSkill;
 use CHARLY\PlatformBundle\Entity\Application;
 use CHARLY\PlatformBundle\Entity\Image;
 use mysql_xdevapi\Exception;
@@ -66,9 +67,11 @@ class AdvertController extends Controller
         $candidatures = $em->getRepository('CHARLYPlatformBundle:Application')
                     ->findBy(array('advert' => $advert));
 
+        $skills = $em->getRepository('CHARLYPlatformBundle:AdvertSkill')
+                    ->findBy(array('advert' => $advert));
         return $this->render(
             'CHARLYPlatformBundle:Advert:view.html.twig',
-            array("advert" => $advert, 'listApplication' => $candidatures)
+            array("advert" => $advert, 'listApplication' => $candidatures, 'listSkills' => $skills)
         );
     }
 
@@ -134,6 +137,63 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     function addAction(Request $request){
+        $em = $this->getDoctrine()->getManager();
+
+        $img = new Image();
+        $img->setAlt("expert all");
+        $img->setUrl('/image/headImg2.jpg');
+
+        $advert = new Advert();
+        $advert->setTitle("Developpeur Expert en tous :-)");
+        $advert->setImage($img);
+        $advert->setAuthor("GOD");
+        $advert->setContent("Si vous savez tous faire sans aucun bug et en fermant les yeux alors vous etes fait pour travailler chez nous (Le tout gratuitement ...)");
+
+        $listCategories = $em->getRepository('CHARLYPlatformBundle:Category')->findAll();
+        foreach ($listCategories as $category)
+            $advert->addCategory($category);
+
+        $listApplis = [
+            [
+                'author' => 'Mahomet prophete',
+                'content' => 'Je pense correspondre à votre demande'
+            ],
+            [
+                'author' => 'Jesus de nazarethe',
+                'content' => 'Encore debutant mais très compétent'
+            ],
+            [
+                'author' => 'Moise',
+                'content' => 'Je peux le faire sans les mains'
+            ],
+            [
+                'author' => "Abraham",
+                'content' => "J'ai appris à tous les autres engagez moi !"
+            ]
+        ];
+        foreach ($listApplis as $application) {
+            $appli = new Application();
+            $appli->setAdvert($advert);
+            $appli->setContent($application['content']);
+            $appli->setAuthor($application['author']);
+
+            $em->persist($appli);
+        }
+
+
+        $em->persist($advert);
+
+        $listSkills = $em->getRepository('CHARLYPlatformBundle:Skill')->findAll();
+
+        foreach ($listSkills as $skill) {
+            $advertSkill = new AdvertSkill();
+            $advertSkill->setAdvert($advert);
+            $advertSkill->setSkill($skill);
+            $advertSkill->setLevel("EXPERT");
+            $em->persist($advertSkill);
+        }
+
+        $em->flush();
 
         //Si requete est en POST c'est que l'user a up the Form
         if($request->isMethod('POST')) {

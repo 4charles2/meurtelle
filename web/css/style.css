@@ -71,13 +71,12 @@ nav{
 .application{
     padding: 10px;
     margin: 8px;
-    background-color: #AAAAAA;
+    background-color: #E9E6E6;
     box-shadow : 2px 2px 4px #000;
 
 }
 #containAppli{
     background-color: cadetblue;
-    border-radius: 15px;
     margin: 10px;
     padding: 11px;
     margin-left: 0px;
