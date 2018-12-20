@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2731a7ba-b5bb-4c46-a49d-7e2c3b28f9d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/javascript/news.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="2731a7ba-b5bb-4c46-a49d-7e2c3b28f9d6" name="Default Changelist" comment="fixture category in adverd and create function repository advert and application&#10;fixed max-width css .panelArticle and create create class colorLight">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/article.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/article.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadAdvert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadAdvert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Advert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Advert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Repository/AdvertRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Repository/AdvertRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Repository/ApplicationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Repository/ApplicationRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,20 +51,20 @@
                       </provider>
                     </entry>
                   </file>
-                  <file pinned="false" current-in-tab="true">
+                  <file pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/index.html.twig">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="238">
-                          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+                        <state relative-caret-position="272">
+                          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file pinned="false" current-in-tab="false">
+                  <file pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/article.html.twig">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="17">
-                          <caret line="1" selection-start-line="1" selection-end-line="1" />
+                        <state relative-caret-position="153">
+                          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
                         </state>
                       </provider>
                     </entry>
@@ -194,8 +182,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+                <state relative-caret-position="731">
+                  <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -223,6 +211,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="charles &lt;4charles2@users.noreply.github.com&gt;" />
         <option value="charles tognol" />
       </list>
     </option>
@@ -266,8 +255,8 @@
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadAdvert.php" />
         <option value="$PROJECT_DIR$/web/javascript/news.js" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/article.html.twig" />
         <option value="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/article.html.twig" />
       </list>
     </option>
   </component>
@@ -470,7 +459,7 @@
       <workItem from="1545128672042" duration="14046000" />
       <workItem from="1545203400664" duration="13715000" />
       <workItem from="1545237996395" duration="703000" />
-      <workItem from="1545302498671" duration="14831000" />
+      <workItem from="1545302498671" duration="15126000" />
     </task>
     <task id="LOCAL-00001" summary="create repository Vcs git for project symfony with OpenClassroom">
       <created>1542209791663</created>
@@ -479,11 +468,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542209791663</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixture category in adverd and create function repository advert and application&#10;fixed max-width css .panelArticle and create create class colorLight">
+      <created>1545332372230</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1545332372230</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114061000" />
+    <option name="totallyTimeSpent" value="114356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,7 +585,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create repository Vcs git for project symfony with OpenClassroom" />
-    <option name="LAST_COMMIT_MESSAGE" value="create repository Vcs git for project symfony with OpenClassroom" />
+    <MESSAGE value="fixture category in adverd and create function repository advert and application&#10;fixed max-width css .panelArticle and create create class colorLight" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixture category in adverd and create function repository advert and application&#10;fixed max-width css .panelArticle and create create class colorLight" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
@@ -891,22 +888,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/article.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="731">
+          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="272">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/article.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
         </state>
       </provider>
     </entry>
