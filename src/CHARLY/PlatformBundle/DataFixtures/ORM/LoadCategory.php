@@ -18,9 +18,20 @@ use CHARLY\PlatformBundle\Entity\Category;
 
 class LoadCategory implements FixtureInterface
 {
+    /**
+     * La création (load) de cette entité et réalisé depuis la fixture de advert
+     * @param ObjectManager $manager
+     */
     //Dans l'argument de la méthode load, l'objet $manager est l'entityManager
     public function load(ObjectManager $manager){
-        //Liste des noms de catégorie à ajouter
+        //Cette fonction et déjà appellé depuis la fixtures advert
+        //self::createCategory($manager);
+        //$manager->flush();
+    }
+
+    public static function createCategory($manager)
+    {
+        $categories = NULL;
         $names = array(
             'Développement web',
             'Développement mobile',
@@ -30,13 +41,13 @@ class LoadCategory implements FixtureInterface
         );
         foreach ($names as $name){
             //On crée la catégorie
-            $category = new Category();
-            $category->setName($name);
+            $categories[$name] = new Category();
+            $categories[$name]->setName($name);
 
             //On la persiste
-            $manager->persist($category);
+            $manager->persist($categories[$name]);
         }
-        $manager->flush();
+        return $categories;
+        
     }
-
 }

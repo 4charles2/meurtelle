@@ -10,4 +10,16 @@ namespace CHARLY\PlatformBundle\Repository;
  */
 class ApplicationRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getApplicationWithAdvert($limit)
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        $qb->innerJoin('a.advert', 'adv')
+            ->select('adv')
+            ->setMaxResults($limit);
+
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
 }

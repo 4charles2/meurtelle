@@ -9,10 +9,9 @@
                 <h6 class="titleFluxArticle">{{ items.title }}</h6>
                 <div class="flexAround">
                 {% for article in items.item %}
-                    {{ include('CHARLYNewsBundle:News:article.html.twig', { 'article': article , 'index': loop.index } ) }}
+                    {{ include('CHARLYNewsBundle:News:article.html.twig' ) }}
                 {% endfor %}
                 </div>
             {% endfor %}
-        {#{ render(controller('CHARLYNewsBundle:News:readRss', {'flux': flux, 'nbNew': 5, 'description': false, 'article': loop.index })) }#}
     </div>
 {% endblock %}

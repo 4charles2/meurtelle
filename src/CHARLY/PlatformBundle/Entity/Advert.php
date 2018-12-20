@@ -5,11 +5,14 @@ namespace CHARLY\PlatformBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
+
+
 /**
  * Advert
  *
  * @ORM\Table(name="advert")
  * @ORM\Entity(repositoryClass="CHARLY\PlatformBundle\Repository\AdvertRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Advert
 {
@@ -71,6 +74,12 @@ class Advert
      */
     private $published = true;
 
+
+    /**
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
     /**
      * Advert constructor.
      * @throws \Exception
@@ -83,6 +92,21 @@ class Advert
         $this->categories = new ArrayCollection();
         $this->applications = new ArrayCollection();
 }
+
+    /**
+     *
+     * callback HasLifecycleCallbacks
+     * Met à jours la date lors de la modification de l'entité this est modifié
+     *
+     * @throws \Exception
+     */
+    /**
+     * @ORM\PreUpdate
+     */
+    public function updateDate()
+    {
+        $this->setUpdatedAt(new \Datetime());
+    }
 
     /**
      * Get id
@@ -277,6 +301,7 @@ class Advert
     public function addApplication(Application $application)
     {
         $this->applications[] = $application;
+        //On lie l'annonce à la candidature
         $application->setAdvert($this);
         return $this;
     }
@@ -289,6 +314,9 @@ class Advert
     public function removeApplication(Application $application)
     {
         $this->applications->removeElement($application);
+
+        //Si notre relation était facultative (nullable=true) Ce qui n'est pas notre cas ici
+        //$application->setAdvert(null);
     }
 
     /**

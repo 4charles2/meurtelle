@@ -2,6 +2,8 @@
 
 namespace CHARLY\PlatformBundle\Repository;
 
+use Doctrine\ORM\QueryBuilder;
+
 /**
  * AdvertRepository
  *
@@ -10,4 +12,142 @@ namespace CHARLY\PlatformBundle\Repository;
  */
 class AdvertRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
+    //Jointure avec le queryBuilder
+    public function getAdvertWithApplication()
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->leftJoin('a.application', 'app')
+            ->addSelect('app')
+            ;
+
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
+    //Recupere toutes les annonces qui corresponde à une catégories
+
+    /**
+     * Return list advert tie in $categoryNames
+     *
+     * @param array $categoryNames
+     *
+     * @return array
+     */
+
+    public function getAdvertWithCategories(array $categoryNames)
+    {
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->innerJoin('a.categories', 'c')
+            ->addSelect('c');
+
+            $qb->where($qb->expr()->in('c.name', $categoryNames));
+
+        return $qb->getQuery()->getResult();
+    }
+
+    public function myFind()
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        $qb
+            ->where('a.author = :author')
+            ->setParameter('author', 'marine')
+            ;
+        //J'ajoute ma méthode perso
+        $this->whereCurrentyear($qb);
+
+    }
+
+    /**
+     * Retourne les annonces de l'auteur de l'année en cours
+     *
+     * @param QueryBuilder $qb
+     *
+     * @throws \Exception
+     */
+    public function whereCurrentyear(QueryBuilder $qb, $author)
+    {
+        $qb
+            ->andWhere('a.date BETWEEN :start AND :end')
+            ->setParameter('start', new \Datetime(date('Y').'-01-01'))
+            ->setParameter('end', new \DateTime('Y').'-12-31')
+            ;
+    }
+
+    /**
+     * Recherche des annonces ecrit par $author avant $year date
+     * Trier par ordre DESC decroissant
+     *
+     * @param $author
+     * @param $year
+     *
+     * @return array
+     */
+    public function findByAuthorAndDate($author, $year)
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        $qb->where('a.author = :author')
+            ->setParameter('author', $author)
+            ->andWhere('a.date < :date')
+            ->setParameter('date', $year)
+            ->orderBy('a.date', 'DESC');
+
+        return $qb->getQuery()->getResult();
+    }
+    //Exemple d'utilisation ses requete existe déjà dans la classe EntityRepository
+    /*
+    public function myFindAll()
+    {
+        // Méthode 1 : en passant par l'entityManager
+        $queryBuilder = $this->_em->createQueryBuilder()
+            ->select("a")
+            ->from($this->_entityName, 'a');
+
+        //Dans un repository, $this->_entityName est le namespace de l'entité gérée
+        //Ici, il vaut donc CHARLYPlatformBundle\Entity\Advert
+
+        //Méthode 2 : en passant par le raccourci (RECOMMANDÉ)
+        $queryBuilder = $this->createQueryBuilder('a');
+
+        //On ajoute pas de critère ou tri particulier, la construction de notre requete est finie
+
+        //On récupère la Query à partir du QueryBuilder
+        $query = $queryBuilder->getQuery();
+
+        //On récupère les résultats à partir de la Query
+        $results = $query->getresult();
+
+        //On retourne ces résultats
+        return $results;
+
+
+        //De façon raccourci cela nous dennerai
+
+        return $this->createQueryBuilder('a')->getQuery()->getresult();
+    }
+
+    public function myfindOne($id)
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        $qb->where('a.id = :id')
+            ->setParameter('id', $id);
+
+        return $qb->getQuery()->getResult();
+    }
+    */
+
+    //Requete DQl
+    public function myFindAllDQL()
+    {
+        $query = $this->_em->createQuery('SELECT a FROM CHARLYPlatformBundle:Advert a');
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

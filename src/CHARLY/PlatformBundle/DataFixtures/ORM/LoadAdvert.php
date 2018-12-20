@@ -23,7 +23,44 @@ class LoadAdvert implements FixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-        $adverts = array(
+        $adverts = $this->dataAdvert();
+
+        $categories = LoadCategory::createCategory($manager);
+
+        foreach ($adverts as $advert){
+            //On créer les annonces
+            $ad = new Advert();
+            $ad->setContent($advert['content']);
+            $ad->setAuthor($advert['author']);
+            $ad->setTitle($advert['title']);
+
+            $image = new Image();
+            $image->setUrl($advert['url']);
+            $image->setAlt($advert['alt']);
+
+            if(isset($advert['categories'])){
+                foreach($advert['categories'] as $category)
+                    $ad->addCategory($categories[$category]);
+            }
+
+            $ad->setImage($image);
+            if(isset($advert['applications'])){
+                foreach ($advert['applications'] as $application){
+                    $apply = new Application();
+                    $apply->setContent($application['content']);
+                    $apply->setAuthor($application['author']);
+                    $apply->setAdvert($ad);
+                    $manager->persist($apply);
+                    
+                }
+            }
+            $manager->persist($ad);
+        }
+        $manager->flush();
+    }
+
+    function dataAdvert(){
+        return array(
             [
                 'title' => 'Recherche developpeur Symfony',
                 'id' => '1',
@@ -31,7 +68,8 @@ class LoadAdvert implements FixtureInterface
                 'content' => 'Nous recherchons un developpeur Symfony sur Lyon',
                 'date' => new \DateTime(),
                 'url' => "/image/symfony.jpg",
-                'alt' => "logo symfony"
+                'alt' => "logo symfony",
+                'categories' => ['Développement web']
             ],
             [
                 'title' => 'Mission de webmaster',
@@ -40,7 +78,8 @@ class LoadAdvert implements FixtureInterface
                 'content' => 'Nous recherchon un webmaster capable de maintenir notre site internet',
                 'date' => new \DateTime(),
                 'url' => '/image/webmaster.png',
-                'alt' => 'logo webmaster'
+                'alt' => 'logo webmaster',
+                'categories' =>['Intégration', 'Développement web']
             ],
             [
                 'title' => 'Offre stage de webdesigner',
@@ -49,7 +88,8 @@ class LoadAdvert implements FixtureInterface
                 'content' => 'Nous recherchons un webdesigner',
                 'date' => new \DateTime(),
                 'url' => '/image/webdesigner.jpg',
-                'alt' => 'logo webdesigner'
+                'alt' => 'logo webdesigner',
+                'categories' => ['Développement web', 'Graphisme']
             ],
             [
                 'title' => 'Developpeur Web Full Stack',
@@ -71,33 +111,9 @@ class LoadAdvert implements FixtureInterface
                         'content' => 'Je veux bien faire un stage chez vous mais je veux 1500€',
                         'author' => 'stagiaire'
                     ]
-                ]
+                ],
+                'categories' => ['Développement web', 'Développement mobile', 'Graphisme', 'Intégration', 'Réseau']
             ]
         );
-
-        foreach ($adverts as $advert){
-            //On créer les annonces
-            $ad = new Advert();
-            $ad->setContent($advert['content']);
-            $ad->setAuthor($advert['author']);
-            $ad->setTitle($advert['title']);
-
-            $image = new Image();
-            $image->setUrl($advert['url']);
-            $image->setAlt($advert['alt']);
-
-            $ad->setImage($image);
-            if(isset($advert['applications'])){
-                foreach ($advert['applications'] as $application){
-                    $apply = new Application();
-                    $apply->setContent($application['content']);
-                    $apply->setAuthor($application['author']);
-                    $apply->setAdvert($ad);
-                    $manager->persist($apply);
-                }
-            }
-            $manager->persist($ad);
-        }
-        $manager->flush();
     }
 }

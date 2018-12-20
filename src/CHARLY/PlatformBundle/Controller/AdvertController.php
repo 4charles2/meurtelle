@@ -13,7 +13,7 @@ use CHARLY\PlatformBundle\Entity\Advert;
 use CHARLY\PlatformBundle\Entity\AdvertSkill;
 use CHARLY\PlatformBundle\Entity\Application;
 use CHARLY\PlatformBundle\Entity\Image;
-use mysql_xdevapi\Exception;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -173,7 +173,9 @@ class AdvertController extends Controller
         ];
         foreach ($listApplis as $application) {
             $appli = new Application();
-            $appli->setAdvert($advert);
+            //Notre relation est maintenant bidirectionnel est comme
+            //$appli->setAdvert($advert);
+            $advert->addApplication($appli);
             $appli->setContent($application['content']);
             $appli->setAuthor($application['author']);
 
@@ -219,13 +221,14 @@ class AdvertController extends Controller
         $listAdverts = $this->getDoctrine()
             ->getManager()
             ->getRepository('CHARLYPlatformBundle:Advert')
-            ->findAll();
-        $adverts = null;
-        //Parcour les annonces en partant de la fin pour ne garder que les trois dernières
-        for($i = 0, $x = sizeof($listAdverts)-1; $i < $limit; $i++, $x--)
-            $adverts[] = $listAdverts[$x];
+            ->findby(
+                array('published' => true),
+                array('date' => 'desc'),
+                $limit,
+                0
+            );
 
-        return $this->render('CHARLYPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $adverts));
+        return $this->render('CHARLYPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $listAdverts));
 
     }
 

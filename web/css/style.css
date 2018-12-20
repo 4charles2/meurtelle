@@ -2,7 +2,7 @@
     background-color: #d7d7d7;
 }
 .maxWidth-child * {
-    width: 100%;
+    max-width: 100%;
 }
 .maxWidth-child h4, .titleFluxArticle{
     border: 1px solid black;
@@ -43,10 +43,10 @@ nav{
     background-color: lightseagreen;
 }
 .panelArticle{
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     margin-right: 2px;
-    padding: 5px;
-    max-width : 433px;
+    max-width : 500px;
+    border-radius: 1px;
 }
 .panelArticle .panel-heading{
     border-color: #133333;
@@ -58,6 +58,9 @@ nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.colorLigth{
+    color: #c6c6c6;
 }
 .liAdvert{
     background-color: #f8f8f8bf;

@@ -1,3 +1,5 @@
+
+
 <div class="panel border-info panelArticle col-md-6" >
     <div class="panel-heading" {% if index is defined %} data-toggle="collapse" data-target="#description{{ index }} {% endif %}">
         <h5 class="panel-title">{{ article.title|raw }}<span class="caret"></span></h5>
@@ -5,8 +7,8 @@
 
 </div>
 {% if  article.description is defined %}
-    <div class="panel-body collapse maxWidth-child col-md-12" id="description{{ index }}" >
-        <p class="panel-body">{{ article.description|raw }}</p>
+    <div class="panel-body collapse maxWidth-child col-md-12 colorLigth" id="description{{ index }}" >
+        <p class="panel-body" >{{ article.description|raw }}</p>
         <cite>Lien : <a href=" {{ article.link }}"> {{ article.link }}</a></cite>
     </div>
 {% endif %}

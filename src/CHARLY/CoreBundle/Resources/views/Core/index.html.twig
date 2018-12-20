@@ -6,34 +6,36 @@
     <link rel="stylesheet" href="/css/style.css" >
     {{ parent() }}
 {% endblock %}
-{% block menuBundle %}
 
-{% endblock %}
 
- {% block body %}
+    {% block menuBundle %}
 
-<section class="col-lg-6 col-md-4" >
-    <div class="maxWidth-child boxShadow" >
-    <h4>Les Toutes dernieres actualités : </h4>
-        {% for key, news in flux %}
-                <a href="{{ path('charly_news_homepage') }}" style="color: black">
-            <article>
-                <h6> {{ news.title }} </h6>
-                <blockquote class="cadetBlue">
-                    <p>{{ news.description }} </p>
-                    <cite>{{ news.link }} </cite>
-                </blockquote>
-            </article>
-            </a>
-        {% endfor %}
-    </div>
-</section>
-<section class="col-lg-6 col-md-4">
-    <div class="maxWidth-child boxShadow">
-    <h4>Les 3 dernieres Offres d'emplois :</h4>
-        <div class="cadetBlue">
-        {{ render(controller('CHARLYPlatformBundle:Advert:menu', {'limit': 3})) }}
-        </div>
-    </div>
-</section>
-{% endblock %}
+    {% endblock %}
+
+    {% block body %}
+
+        <section class="col-lg-6 col-md-6 col-xs-12" >
+            <div class="maxWidth-child boxShadow" >
+                <h4>Les Toutes dernieres actualités : </h4>
+                {% for key, news in flux %}
+                    <a href="{{ path('charly_news_homepage') }}" style="color: black">
+                    <article>
+                        <h6> {{ news.title }} </h6>
+                            <blockquote class="cadetBlue">
+                                <p>{{ news.description }} </p>
+                                <cite>{{ news.link }} </cite>
+                            </blockquote>
+                    </article>
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+        <section class="col-lg-6 col-md-6 col-xs-12">
+            <div class="maxWidth-child boxShadow">
+                <h4>Les 3 dernieres Offres d'emplois :</h4>
+                <div class="cadetBlue">
+                    {{ render(controller('CHARLYPlatformBundle:Advert:menu', {'limit': 3})) }}
+                </div>
+            </div>
+        </section>
+    {% endblock %}
