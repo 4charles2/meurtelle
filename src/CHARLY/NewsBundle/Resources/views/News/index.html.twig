@@ -9,6 +9,7 @@
                 <h6 class="titleFluxArticle">{{ items.title }}</h6>
                 <div class="flexAround">
                 {% for article in items.item %}
+                    {% set index = loop.parent.loop.index~loop.index %}
                     {{ include('CHARLYNewsBundle:News:article.html.twig' ) }}
                 {% endfor %}
                 </div>

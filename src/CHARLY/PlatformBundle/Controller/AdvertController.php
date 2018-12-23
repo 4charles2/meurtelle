@@ -34,7 +34,9 @@ class AdvertController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    function indexAction(){
+    function indexAction()
+    {
+
         //Decommenter pour persister les annonces dans la base sql avec les images
         //$this->sendAdvert();
 
@@ -44,8 +46,8 @@ class AdvertController extends Controller
             ->findAll();
 
         return $this->render('CHARLYPlatformBundle:Advert:index.html.twig',
-            array('listAdverts' => $adverts)
-            );
+                             array('listAdverts' => $adverts)
+        );
     }
 
     /**
