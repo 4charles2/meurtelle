@@ -74,7 +74,10 @@ class Advert
      */
     private $published = true;
 
-
+    /**
+     * @ORM\Column(name="nb_applications", type="interger")
+     */
+    private $nbApplications = 0;
     /**
      * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
@@ -92,22 +95,6 @@ class Advert
         $this->categories = new ArrayCollection();
         $this->applications = new ArrayCollection();
 }
-
-    /**
-     *
-     * callback HasLifecycleCallbacks
-     * Met à jours la date lors de la modification de l'entité this est modifié
-     *
-     * @throws \Exception
-     */
-    /**
-     * @ORM\PreUpdate
-     */
-    public function updateDate()
-    {
-        $this->setUpdatedAt(new \Datetime());
-    }
-
     /**
      * Get id
      *
@@ -117,6 +104,49 @@ class Advert
     {
         return $this->id;
     }
+
+    /**
+     * Augmente le compteur si une nouvelle application est crée
+     */
+    public function increaseApplications(){
+        $this->nbApplications++;
+    }
+
+    /**
+     * Diminue le compteur si une application est suprimée
+     */
+    public function decreaseApplications(){
+        $this->nbApplications--;
+    }
+
+    /**
+     * set de nbApplication nombre d'application pour l'instance d'advert
+     * @param $nbApplications
+     */
+    public function setNbApplications($nbApplications){
+        $this->nbApplications = $nbApplications;
+    }
+
+    /**
+     * Retourne le nombre d'applications pour l'instance d'advert
+     * @return int
+     */
+    public function getNbApplications(){
+        return $this->nbApplications;
+    }
+    /**
+     * @ORM\PreUpdate
+     *
+     * callback HasLifecycleCallbacks
+     * Met à jours la date lors de la modification de l'entité this est modifié
+     *
+     * @throws \Exception
+     */
+    public function updateDate()
+    {
+        $this->setUpdatedAt(new \Datetime());
+    }
+
 
     /**
      * Set date

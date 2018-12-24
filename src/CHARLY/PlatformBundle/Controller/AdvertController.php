@@ -37,9 +37,6 @@ class AdvertController extends Controller
     function indexAction()
     {
 
-        //Decommenter pour persister les annonces dans la base sql avec les images
-        //$this->sendAdvert();
-
         $adverts = $this->getDoctrine()
             ->getManager()
             ->getRepository('CHARLYPlatformBundle:Advert')
