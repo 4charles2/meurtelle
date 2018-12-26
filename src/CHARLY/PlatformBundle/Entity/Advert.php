@@ -75,7 +75,7 @@ class Advert
     private $published = true;
 
     /**
-     * @ORM\Column(name="nb_applications", type="interger")
+     * @ORM\Column(name="nb_applications", type="integer")
      */
     private $nbApplications = 0;
     /**

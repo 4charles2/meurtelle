@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="application")
  * @ORM\Entity(repositoryClass="CHARLY\PlatformBundle\Repository\ApplicationRepository")
- * @ORM\HasLyfecycleCallbacks()
+ * @ORM\HasLifecycleCallbacks()
  */
 class Application
 {
@@ -63,19 +63,23 @@ class Application
     }
 
     /**
-     * @ORM\PrePersit
+     *
      * When create new application then call function increaseApplications
      * from advert for count nbApplications this advert
-     */
+     *
+     * @ORM\PrePersist
+     **/
     public function increase(){
         $this->getAdvert()->increaseApplications();
     }
 
     /**
-     * @ORM\PreRemove
+     *
      *When delete application then call function decreaseApplications
      *from advert for count nbApplication this advert
-     */
+     *
+     * @ORM\PreRemove
+     **/
     public function decrease(){
         $this->getAdvert()->decreaseApplications();
     }
