@@ -12,7 +12,7 @@
 
 namespace CHARLY\PlatformBundle\Email;
 
-use CHARLY\PlatformBundle\Entity\application
+use CHARLY\PlatformBundle\Entity\application;
 
 
 class ApplicationMailer

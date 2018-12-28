@@ -138,64 +138,6 @@ class AdvertController extends Controller
     function addAction(Request $request){
         $em = $this->getDoctrine()->getManager();
 
-        $img = new Image();
-        $img->setAlt("expert all");
-        $img->setUrl('/image/headImg2.jpg');
-
-        $advert = new Advert();
-        $advert->setTitle("Developpeur Expert en tous :-)");
-        $advert->setImage($img);
-        $advert->setAuthor("GOD");
-        $advert->setContent("Si vous savez tous faire sans aucun bug et en fermant les yeux alors vous etes fait pour travailler chez nous (Le tout gratuitement ...)");
-
-        $listCategories = $em->getRepository('CHARLYPlatformBundle:Category')->findAll();
-        foreach ($listCategories as $category)
-            $advert->addCategory($category);
-
-        $listApplis = [
-            [
-                'author' => 'Mahomet prophete',
-                'content' => 'Je pense correspondre à votre demande'
-            ],
-            [
-                'author' => 'Jesus de nazarethe',
-                'content' => 'Encore debutant mais très compétent'
-            ],
-            [
-                'author' => 'Moise',
-                'content' => 'Je peux le faire sans les mains'
-            ],
-            [
-                'author' => "Abraham",
-                'content' => "J'ai appris à tous les autres engagez moi !"
-            ]
-        ];
-        foreach ($listApplis as $application) {
-            $appli = new Application();
-            //Notre relation est maintenant bidirectionnel est comme
-            //$appli->setAdvert($advert);
-            $advert->addApplication($appli);
-            $appli->setContent($application['content']);
-            $appli->setAuthor($application['author']);
-
-            $em->persist($appli);
-        }
-
-
-        $em->persist($advert);
-
-        $listSkills = $em->getRepository('CHARLYPlatformBundle:Skill')->findAll();
-
-        foreach ($listSkills as $skill) {
-            $advertSkill = new AdvertSkill();
-            $advertSkill->setAdvert($advert);
-            $advertSkill->setSkill($skill);
-            $advertSkill->setLevel("EXPERT");
-            $em->persist($advertSkill);
-        }
-
-        $em->flush();
-
         //Si requete est en POST c'est que l'user a up the Form
         if($request->isMethod('POST')) {
             $this->addFlash('info', "Votre annonce à bien été enregistrer");
@@ -204,7 +146,7 @@ class AdvertController extends Controller
             return $this->redirectToRoute('charly_platform_view');
         }
         //Si la requete n'est pas en POST alors on affiche le formulaire
-        return $this->render('CHARLYPlatformBundle:Advert:add.html.twig', array('advert' => $advert));
+        return $this->render('CHARLYPlatformBundle:Advert:add.html.twig');
     }
 
     /**

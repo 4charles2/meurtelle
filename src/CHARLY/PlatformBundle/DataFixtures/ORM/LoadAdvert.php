@@ -113,6 +113,33 @@ class LoadAdvert implements FixtureInterface
                     ]
                 ],
                 'categories' => ['Développement web', 'Développement mobile', 'Graphisme', 'Intégration', 'Réseau']
+            ],
+            [
+                'title' => 'Developpeur Expert en tous',
+                'author' => 'GOD',
+                'content' => 'Si vous savez tous faire sans aucun bug et en fermant les yeux alors vous etes fait pour travailler chez nous (le tout gratuitement ...)',
+                'date' => new \DateTime(),
+                'url' => '/image/headImg2.jpg',
+                'alt' => 'expert all',
+                'applications' => [
+                    [
+                        'content' => 'Je pense correspondre à votre demande',
+                        'author' => 'Mahomet prophete'
+                    ],
+                    [
+                        'content' => 'Encore debutant mais très compétent',
+                        'author' => 'Jesus de nazareth'
+                    ],
+                    [
+                        'content' => 'Je peux le faire sans les mains',
+                        'author' => 'Moise'
+                    ],
+                    [
+                        'content' => "J'ai appris à tous les autres engagez moi !",
+                        'author' => 'Abraham'
+                    ]
+                ],
+                'categories' => ['Développement web', 'Développement mobile', 'Graphisme', 'Intégration', 'Réseau']
             ]
         );
     }
