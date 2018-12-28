@@ -61,7 +61,11 @@ class Advert
      * @ORM\Column(name="author", type="string", length=255)
      */
     private $author;
-
+    /**
+     * @var string
+     * @ORM\Column(name="email", type="string", length=255, nullable=true)
+     */
+    private $email;
     /**
      * @var string
      *
@@ -218,6 +222,22 @@ class Advert
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
     }
 
     /**

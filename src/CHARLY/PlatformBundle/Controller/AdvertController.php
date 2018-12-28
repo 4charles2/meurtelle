@@ -12,6 +12,7 @@ namespace CHARLY\PlatformBundle\Controller;
 use CHARLY\PlatformBundle\Entity\Advert;
 use CHARLY\PlatformBundle\Entity\AdvertSkill;
 use CHARLY\PlatformBundle\Entity\Application;
+use CHARLY\PlatformBundle\Entity\Category;
 use CHARLY\PlatformBundle\Entity\Image;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -137,6 +138,30 @@ class AdvertController extends Controller
      */
     function addAction(Request $request){
         $em = $this->getDoctrine()->getManager();
+        $category = $em->getRepository('CHARLYPlatformBundle:Entity:Category')->findByName('Développement web');
+        $advert = new Advert();
+
+        $advert->setAuthor('TOGNOL Charles');
+        $advert->setContent('Mon annonce creer dans le controleur');
+        $advert->setTitle('Test du service Application Mailler');
+
+        $advert->setEmail('charly.learn@gmail.com');
+
+
+        $advert->addCategory($category);
+
+        $application = new Application();
+        $application->setEmail('me@mail.fr');
+        $application->setAuthor('me');
+        $application->setContent('Je suis la pour le test');
+        $application->setAdvert($advert);
+
+
+
+        $advert->addApplication($application);
+
+        $em->persist($advert);
+        $em->flush();
 
         //Si requete est en POST c'est que l'user a up the Form
         if($request->isMethod('POST')) {

@@ -37,6 +37,13 @@ class Application
     /**
      * @var string
      *
+     * @ORM\Column(name="email", type="string", length=255, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="content", type="string", length=255)
      */
     private $content;
@@ -178,5 +185,21 @@ class Application
     public function getAdvert()
     {
         return $this->advert;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
     }
 }

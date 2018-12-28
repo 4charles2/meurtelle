@@ -33,6 +33,8 @@ class LoadAdvert implements FixtureInterface
             $ad->setContent($advert['content']);
             $ad->setAuthor($advert['author']);
             $ad->setTitle($advert['title']);
+            $ad->setDate($advert['date']);
+            isset($advert['email']) ? $ad->setEmail($advert['email']) : '';
 
             $image = new Image();
             $image->setUrl($advert['url']);
@@ -49,8 +51,11 @@ class LoadAdvert implements FixtureInterface
                     $apply = new Application();
                     $apply->setContent($application['content']);
                     $apply->setAuthor($application['author']);
+                    isset($application['email']) ? $apply->setEmail($application['email']) : '';
+
                     $apply->setAdvert($ad);
                     $manager->persist($apply);
+
                     
                 }
             }
@@ -66,7 +71,7 @@ class LoadAdvert implements FixtureInterface
                 'id' => '1',
                 'author' => 'Alexandre',
                 'content' => 'Nous recherchons un developpeur Symfony sur Lyon',
-                'date' => new \DateTime(),
+                'date' => new \DateTime('2018-09-10'),
                 'url' => "/image/symfony.jpg",
                 'alt' => "logo symfony",
                 'categories' => ['Développement web']
@@ -76,7 +81,7 @@ class LoadAdvert implements FixtureInterface
                 'id' => '2',
                 'author' => 'Hugo',
                 'content' => 'Nous recherchon un webmaster capable de maintenir notre site internet',
-                'date' => new \DateTime(),
+                'date' => new \DateTime('2018-10-15'),
                 'url' => '/image/webmaster.png',
                 'alt' => 'logo webmaster',
                 'categories' =>['Intégration', 'Développement web']
@@ -86,7 +91,7 @@ class LoadAdvert implements FixtureInterface
                 'id' => '3',
                 'author' => 'Mathieu',
                 'content' => 'Nous recherchons un webdesigner',
-                'date' => new \DateTime(),
+                'date' => new \DateTime('2018-08-02'),
                 'url' => '/image/webdesigner.jpg',
                 'alt' => 'logo webdesigner',
                 'categories' => ['Développement web', 'Graphisme']
@@ -94,14 +99,16 @@ class LoadAdvert implements FixtureInterface
             [
                 'title' => 'Developpeur Web Full Stack',
                 'author' => 'Charles',
+                'email' => 'contact@charles-tognol.fr',
                 'content' => 'Recherche un developpeur Full Stack PHP Javascript HTML5 CSS3 Androïd Java',
-                'date' => new \DateTime(),
+                'date' => new \DateTime('2018-12-22'),
                 'url' => '/image/devFullStack.jpg',
                 'alt' => 'dev Full Stack',
                 'applications' => [
                     [
                         'content' => 'Votre Offre correspond en tous points à ce que je recherche tous mon savoir faire à votre service',
-                        'author' => 'anonymous'
+                        'author' => 'anonymous',
+                        'email' => 'contact@charles-tognol.fr'
                     ],
                     [
                         'content' => 'La qualite de vos services accompagner de ma motivation ferons des étincelles',
@@ -117,6 +124,7 @@ class LoadAdvert implements FixtureInterface
             [
                 'title' => 'Developpeur Expert en tous',
                 'author' => 'GOD',
+                'email' => 'contact@charles-tognol.fr',
                 'content' => 'Si vous savez tous faire sans aucun bug et en fermant les yeux alors vous etes fait pour travailler chez nous (le tout gratuitement ...)',
                 'date' => new \DateTime(),
                 'url' => '/image/headImg2.jpg',
@@ -136,7 +144,8 @@ class LoadAdvert implements FixtureInterface
                     ],
                     [
                         'content' => "J'ai appris à tous les autres engagez moi !",
-                        'author' => 'Abraham'
+                        'author' => 'Abraham',
+                        'email' => 'contact@charles-tognol.fr'
                     ]
                 ],
                 'categories' => ['Développement web', 'Développement mobile', 'Graphisme', 'Intégration', 'Réseau']
