@@ -38,11 +38,18 @@ class ApplicationMailer
         if($application->getAdvert()->getEmail() != NULL ) {
             $message = new \Swift_Message(
                 'Nouvelle candidature',
-                'Vous avez reçu une nouvelle candidature.'
+                'Vous avez reçu une nouvelle candidature de '
+                .$application->getAuthor()
+                .$application->getEmail()
+                .' Voici sa réponse : '
+                .$application->getContent()
+                .' Cette réponse concerne votre annonce : '
+                .$application->getAdvert()->getTitle()
+                .' '.$application->getContent()
+                .' Mise en ligne le '.$application->getDate()->getOffset()
             );
-
             $message
-                ->addTo($application->getAdvert()->getEmail())//Ici bien sûr il faudrait un attribut "email", j'utilise "author" à la place
+                ->addTo($application->getAdvert()->getEmail())
                 ->addFrom('admin@charles-tognol.fr');
             $this->mailer->send($message);
         }

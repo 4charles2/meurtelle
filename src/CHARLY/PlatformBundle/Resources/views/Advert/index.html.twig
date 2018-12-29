@@ -15,7 +15,8 @@
         {% for advert in listAdverts %}
 
                 <li class="liAdvert" style="list-style-type: none; border: 1px solid darkslategray; margin-bottom: 20px; padding: 20px">
-                    <img src="{{ advert.image.getUrl }}" alt="{{ advert.image.getAlt }}" width="50px">
+
+                    {% if advert.image.getUrl is defined %}<img src="{{ advert.image.getUrl }}" alt="{{ advert.image.getAlt }}" width="50px">{% endif %}
                     <a href={{ path('charly_platform_view',{'id': advert.id}) }}>
                         {{ advert.title }}
                     </a>

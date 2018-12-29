@@ -11,6 +11,6 @@ framework:
 web_profiler:
     toolbar: false
     intercept_redirects: false
-
+#Pour les test ne concerne le dev ni le mode prod
 swiftmailer:
     disable_delivery: true

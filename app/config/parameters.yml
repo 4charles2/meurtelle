@@ -8,9 +8,9 @@ parameters:
     database_password: null
 
     #SERVICE SWIFT_MAILER
-    mailer_transport: smtp
+    mailer_transport: gmail
     mailer_host: smtp.gmail.com
-    mailer_user: me@me.fr
-    mailer_password: mepass
+    mailer_user: charly
+    mailer_password: PASSWORD
     mailer_port: 465
     secret: 86ac8b0c32085d740682cb1e9fb7b7b55282f32b

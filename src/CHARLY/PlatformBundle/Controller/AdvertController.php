@@ -138,7 +138,7 @@ class AdvertController extends Controller
      */
     function addAction(Request $request){
         $em = $this->getDoctrine()->getManager();
-        $category = $em->getRepository('CHARLYPlatformBundle:Entity:Category')->findByName('Développement web');
+        $category = $em->getRepository('CHARLYPlatformBundle:Category')->findByName('Développement web');
         $advert = new Advert();
 
         $advert->setAuthor('TOGNOL Charles');
@@ -148,7 +148,7 @@ class AdvertController extends Controller
         $advert->setEmail('charly.learn@gmail.com');
 
 
-        $advert->addCategory($category);
+        $advert->addCategory($category[0]);
 
         $application = new Application();
         $application->setEmail('me@mail.fr');
@@ -161,6 +161,7 @@ class AdvertController extends Controller
         $advert->addApplication($application);
 
         $em->persist($advert);
+        $em->persist($application);
         $em->flush();
 
         //Si requete est en POST c'est que l'user a up the Form
