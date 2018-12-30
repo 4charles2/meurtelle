@@ -31,4 +31,4 @@ monolog:
         #    level:  info
 
 swiftmailer:
-    delivery_addresses: ['mailDest@Developper.mode']
+    delivery_addresses: ['charly.learn@gmail.com']
