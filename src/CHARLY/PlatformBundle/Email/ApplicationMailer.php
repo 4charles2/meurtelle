@@ -48,6 +48,7 @@ class ApplicationMailer
                 .' '.$application->getContent()
                 .' Mise en ligne le '.$application->getDate()->getOffset()
             );
+            //correction du depot git
             $message
                 ->addTo($application->getAdvert()->getEmail())
                 ->addFrom('admin@charles-tognol.fr');
