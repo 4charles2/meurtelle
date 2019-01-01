@@ -5,6 +5,9 @@
 #        arguments: ["@service_id", "plain_value", %parameter%]
 
 services:
+  charly_platform.antispam:
+    class: CHARLY\PlatformBundle\Antispam\Antispam
+
   charly_platform.email.application_mailer:
     class: CHARLY\PlatformBundle\Email\ApplicationMailer
     arguments:

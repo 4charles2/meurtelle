@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8acfbd06-4588-4d18-93f0-74294f19164e" name="Default Changelist" comment="create methode getUpdateDate setUpdateDate in entity advert">
+    <list default="true" id="8acfbd06-4588-4d18-93f0-74294f19164e" name="Default Changelist" comment="layout body html send mail in ApplicationMailer">
+      <change afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Antispam/Antispam.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/ApplicationMailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/ApplicationMailer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Tests/Controller/DefaultControllerTest.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +23,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="vertical" split-proportion="0.825779">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.57052296">
+        <splitter split-orientation="horizontal" split-proportion="0.72118646">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
@@ -41,11 +41,10 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="82">
-                      <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+                    <state relative-caret-position="1054">
+                      <caret line="173" selection-start-line="173" selection-end-line="173" />
                       <folding>
-                        <element signature="e#633#6363#0#PHP" expanded="true" />
-                        <element signature="e#4336#5681#0#PHP" expanded="true" />
+                        <element signature="e#136#176#0#PHP" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -54,7 +53,7 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Advert.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="35">
+                    <state relative-caret-position="1173">
                       <caret line="167" column="5" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
                       <folding>
                         <element signature="e#133#298#0#PHP" expanded="true" />
@@ -72,43 +71,54 @@
                         <element signature="e#3362#3437#0#PHP" expanded="true" />
                         <element signature="e#3443#3485#0#PHP" expanded="true" />
                         <element signature="e#3490#3581#0#PHP" expanded="true" />
-                        <element signature="e#4352#4391#0#PHP" expanded="true" />
-                        <element signature="e#4396#4471#0#PHP" expanded="true" />
-                        <element signature="e#4477#4510#0#PHP" expanded="true" />
-                        <element signature="e#4515#4582#0#PHP" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/ApplicationMailer.php">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="102">
-                      <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-                      <folding>
-                        <element signature="e#332#2119#0#PHP" expanded="true" />
-                        <element signature="e#314#351#0#PHP" expanded="true" />
-                        <element signature="e#378#470#0#PHP" expanded="true" />
-                        <element signature="e#545#636#0#PHP" expanded="true" />
-                        <element signature="e#572#622#0#PHP" expanded="true" />
-                        <element signature="e#675#2117#0#PHP" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                        <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/ApplicationMailer.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="102">
+                      <caret line="13" selection-start-line="13" selection-end-line="13" />
+                      <folding>
+                        <element signature="e#314#351#0#PHP" expanded="true" />
+                        <element signature="e#378#470#0#PHP" expanded="true" />
+                        <element signature="e#572#622#0#PHP" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="357">
-                      <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+                    <state relative-caret-position="204">
+                      <caret line="22" selection-start-line="22" selection-end-line="22" />
                       <folding>
                         <element signature="e#244#289#0#PHP" expanded="true" />
+                        <element signature="e#611#926#0#PHP" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Antispam/Antispam.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="187">
+                      <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DependencyInjection/CHARLYPlatformExtension.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state>
+                      <folding>
+                        <element signature="e#432#867#0#PHP" expanded="true" />
+                        <element signature="e#523#865#0#PHP" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -120,19 +130,19 @@
             <splitter split-orientation="vertical" split-proportion="0.6360294">
               <split-first>
                 <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-                  <file pinned="false" current-in-tab="false">
+                  <file pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="153">
-                          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+                        <state relative-caret-position="85">
+                          <caret line="9" selection-start-line="9" selection-end-line="9" />
                         </state>
                       </provider>
                     </entry>
                   </file>
-                  <file pinned="false" current-in-tab="true">
+                  <file pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="205">
+                        <state relative-caret-position="561">
                           <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
                         </state>
                       </provider>
@@ -141,7 +151,7 @@
                   <file pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="17">
+                        <state relative-caret-position="357">
                           <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
                           <folding>
                             <element signature="e#82#262#0#PHP" expanded="true" />
@@ -159,8 +169,8 @@
                   <file pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="57">
-                          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="29" />
+                        <state relative-caret-position="31">
+                          <caret line="11" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
                         </state>
                       </provider>
                     </entry>
@@ -185,7 +195,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/index.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-30">
+                <state relative-caret-position="612">
                   <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="40" selection-end-column="14" />
                 </state>
               </provider>
@@ -251,18 +261,19 @@
         <option value="$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php" />
-        <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadAdvert.php" />
         <option value="$PROJECT_DIR$/app/config/config_test.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/index.html.twig" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Advert.php" />
-        <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/views/recepAppliAdvert.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/ApplicationMailer.php" />
+        <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Antispam/Antispam.php" />
+        <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" />
+        <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php" />
       </list>
     </option>
   </component>
@@ -310,10 +321,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -321,7 +332,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -424,7 +434,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="CHARLY" type="462c0819:PsiDirectoryNode" />
               <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFixtures" type="462c0819:PsiDirectoryNode" />
+              <item name="Antispam" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
@@ -432,8 +442,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="CHARLY" type="462c0819:PsiDirectoryNode" />
               <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFixtures" type="462c0819:PsiDirectoryNode" />
-              <item name="ORM" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
@@ -441,23 +450,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="CHARLY" type="462c0819:PsiDirectoryNode" />
               <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="DoctrineListener" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CHARLY" type="462c0819:PsiDirectoryNode" />
-              <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Email" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CHARLY" type="462c0819:PsiDirectoryNode" />
-              <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+              <item name="DependencyInjection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
@@ -479,16 +472,20 @@
             <path>
               <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
               <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CHARLY" type="462c0819:PsiDirectoryNode" />
-              <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
               <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
               <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="dev" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
@@ -504,6 +501,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,7 +554,8 @@
       <workItem from="1545810961332" duration="2256000" />
       <workItem from="1545988680969" duration="628000" />
       <workItem from="1545990631179" duration="19793000" />
-      <workItem from="1546167574149" duration="13240000" />
+      <workItem from="1546167574149" duration="18974000" />
+      <workItem from="1546241301838" duration="1118000" />
     </task>
     <task id="LOCAL-00001" summary="create repository Vcs git for project symfony with OpenClassroom">
       <created>1542209791663</created>
@@ -621,11 +620,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546169737654</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="layout body html send mail in ApplicationMailer">
+      <created>1546184724982</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1546184724982</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160824000" />
+    <option name="totallyTimeSpent" value="167676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -640,7 +646,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.18657719" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.21073826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50141644" side_tool="true" weight="0.20738254" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -649,7 +655,7 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.23796034" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4986577" weight="0.27478755" />
@@ -738,33 +744,10 @@
     <MESSAGE value="Create service ApplicationMailer in PlatformBundle" />
     <MESSAGE value="clear depot git because error yesterday" />
     <MESSAGE value="create methode getUpdateDate setUpdateDate in entity advert" />
-    <option name="LAST_COMMIT_MESSAGE" value="create methode getUpdateDate setUpdateDate in entity advert" />
+    <MESSAGE value="layout body html send mail in ApplicationMailer" />
+    <option name="LAST_COMMIT_MESSAGE" value="layout body html send mail in ApplicationMailer" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -938,16 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DependencyInjection/CHARLYPlatformExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#432#867#0#PHP" expanded="true" />
-            <element signature="e#523#865#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadCategory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -972,13 +945,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/NewsBundle/DependencyInjection/Configuration.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1020,13 +986,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/recepAppliAdvert" />
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/views/recepAppliAdvert.html.twig" />
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
+        <state relative-caret-position="1105">
           <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="n#AppCache#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4367">
+          <folding>
+            <element signature="n#appDevDebugProjectContainer#0;n#!!top" expanded="true" />
+            <element signature="e#700#19438#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Tests/Controller/DefaultControllerTest.php" />
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadAdvert.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1037,45 +1033,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php">
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+        <state relative-caret-position="1054">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
           <folding>
-            <element signature="e#244#289#0#PHP" expanded="true" />
+            <element signature="e#136#176#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding>
-            <element signature="e#82#262#0#PHP" expanded="true" />
-            <element signature="e#287#438#0#PHP" expanded="true" />
-            <element signature="e#626#724#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="40" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Advert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
+        <state relative-caret-position="1173">
           <caret line="167" column="5" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
           <folding>
             <element signature="e#133#298#0#PHP" expanded="true" />
@@ -1093,70 +1063,96 @@
             <element signature="e#3362#3437#0#PHP" expanded="true" />
             <element signature="e#3443#3485#0#PHP" expanded="true" />
             <element signature="e#3490#3581#0#PHP" expanded="true" />
-            <element signature="e#4352#4391#0#PHP" expanded="true" />
-            <element signature="e#4396#4471#0#PHP" expanded="true" />
-            <element signature="e#4477#4510#0#PHP" expanded="true" />
-            <element signature="e#4515#4582#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/recepAppliAdvert">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-          <folding>
-            <element signature="e#633#6363#0#PHP" expanded="true" />
-            <element signature="e#4336#5681#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/views/recepAppliAdvert.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/menu.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/ApplicationMailer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#332#2119#0#PHP" expanded="true" />
             <element signature="e#314#351#0#PHP" expanded="true" />
             <element signature="e#378#470#0#PHP" expanded="true" />
-            <element signature="e#545#636#0#PHP" expanded="true" />
             <element signature="e#572#622#0#PHP" expanded="true" />
-            <element signature="e#675#2117#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Antispam/Antispam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DependencyInjection/CHARLYPlatformExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#432#867#0#PHP" expanded="true" />
+            <element signature="e#523#865#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding>
+            <element signature="e#82#262#0#PHP" expanded="true" />
+            <element signature="e#287#438#0#PHP" expanded="true" />
+            <element signature="e#626#724#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="11" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="40" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#244#289#0#PHP" expanded="true" />
+            <element signature="e#611#926#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

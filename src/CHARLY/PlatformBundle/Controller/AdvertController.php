@@ -160,8 +160,19 @@ class AdvertController extends Controller
 
         $advert->addApplication($application);
 
+        //GET SERVICE ANTISPAM
+        $antiSpam = $this->container->get('charly_platform.antispam');
+
         $em->persist($advert);
         $em->persist($application);
+
+        if($antiSpam->isSpam($advert->getContent())){
+            $em->refresh($advert);
+            $em->refresh($application);
+            throw new \Exception('Votre Annonce à été detecté comme un spam');
+        }
+
+
         $em->flush();
 
         //Si requete est en POST c'est que l'user a up the Form
