@@ -1,12 +1,506 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8acfbd06-4588-4d18-93f0-74294f19164e" name="Default Changelist" comment="layout body html send mail in ApplicationMailer">
-      <change afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Antispam/Antispam.php" afterDir="false" />
+    <list default="true" id="8acfbd06-4588-4d18-93f0-74294f19164e" name="Default Changelist" comment="install extension doctrine StofDoctrineExtensionsBundle">
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/SyncTool.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/Transliterator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x00.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x01.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x02.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x03.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x04.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x05.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x06.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x07.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x09.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x0a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x0b.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x0c.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x0d.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x0e.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x0f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x10.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x11.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x12.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x13.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x14.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x15.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x16.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x17.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x18.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x1e.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x1f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x20.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x21.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x24.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x25.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x26.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x27.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x28.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x30.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x31.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x32.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x33.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x4e.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x4f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x50.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x51.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x52.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x53.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x54.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x55.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x56.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x57.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x58.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x59.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x5a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x5b.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x5c.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x5d.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x5e.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x5f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x60.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x61.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x62.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x63.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x64.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x65.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x66.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x67.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x68.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x69.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x6a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x6b.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x6c.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x6d.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x6e.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x6f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x70.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x71.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x72.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x73.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x74.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x75.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x76.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x77.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x78.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x79.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x7a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x7b.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x7c.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x7d.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x7e.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x7f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x80.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x81.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x82.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x83.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x84.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x85.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x86.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x87.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x88.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x89.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x8a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x8b.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x8c.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x8d.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x8e.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x8f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x90.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x91.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x92.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x93.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x94.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x95.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x96.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x97.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x98.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x99.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x9a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x9b.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x9c.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x9d.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x9e.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/x9f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xa0.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xa1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xa2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xa3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xa4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xac.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xae.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xaf.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb0.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb5.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb6.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb7.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb8.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xb9.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xba.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xbb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xbc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xbd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xbe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xbf.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc0.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc5.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc6.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc7.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc8.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xc9.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xca.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xcb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xcc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xcd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xce.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xcf.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xd0.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xd1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xd2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xd3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xd4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xd5.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xd6.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xd7.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xf9.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xfa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xfb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xfc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xfd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xfe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/behat/transliterator/src/Behat/Transliterator/data/xff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/composer7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/annotations.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/blameable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/ip_traceable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/loggable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/mapping.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/reference_integrity.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/references.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/sluggable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/softdeleteable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/sortable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/symfony2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/timestampable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/transaction-safety.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/translatable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/tree.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/uploadable.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/doc/zendframework2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/app/Entity/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/app/Entity/CategoryTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/app/Entity/Repository/CategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/bin/console" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/bin/console.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/em.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/example/run.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/AbstractTrackingListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Blameable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/BlameableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Mapping/Event/BlameableAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Traits/Blameable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Traits/BlameableDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Blameable/Traits/BlameableEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/DoctrineExtensions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/BadMethodCallException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/FeatureNotImplementedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/InvalidMappingException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/ReferenceIntegrityStrictException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/RuntimeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/TreeLockingException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UnexpectedValueException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UnsupportedObjectManagerException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableCantWriteException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableCouldntGuessMimeTypeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableDirectoryNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableExtensionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableFileAlreadyExistsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableFileNotReadableException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableFormSizeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableIniSizeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableInvalidFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableInvalidMimeTypeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableInvalidPathException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableMaxSizeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableNoFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableNoPathDefinedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableNoTmpDirException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadablePartialException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Exception/UploadableUploadException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/IpTraceable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/IpTraceableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Mapping/Event/IpTraceableAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Traits/IpTraceable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Traits/IpTraceableDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/IpTraceable/Traits/IpTraceableEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Document/LogEntry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Document/MappedSuperclass/AbstractLogEntry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Document/Repository/LogEntryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity/LogEntry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity/MappedSuperclass/AbstractLogEntry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity/Repository/LogEntryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Loggable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/LoggableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Mapping/Event/LoggableAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/All.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Blameable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/IpTraceable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Language.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Locale.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Loggable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Reference.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/ReferenceIntegrity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/ReferenceMany.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/ReferenceManyEmbed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/ReferenceOne.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Slug.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/SlugHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/SlugHandlerOption.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/SoftDeleteable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/SortableGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/SortablePosition.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Timestampable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Translatable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TranslationEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Tree.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreeClosure.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreeLeft.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreeLevel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreeLockTime.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreeParent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreePath.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreePathHash.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreePathSource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreeRight.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/TreeRoot.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Uploadable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/UploadableFileMimeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/UploadableFileName.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/UploadableFilePath.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/UploadableFileSize.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Versioned.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Driver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Driver/AbstractAnnotationDriver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Driver/AnnotationDriverInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Driver/Chain.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Driver/File.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Event/AdapterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/ExtensionMetadataFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/MappedEventSubscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/ReferenceIntegrity/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/ReferenceIntegrity/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/ReferenceIntegrity/Mapping/Validator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/ReferenceIntegrity/ReferenceIntegrity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/ReferenceIntegrity/ReferenceIntegrityListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/References/LazyCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/References/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/References/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/References/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/References/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/References/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/References/Mapping/Event/ReferencesAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/References/ReferencesListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Handler/InversedRelativeSlugHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Handler/RelativeSlugHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Handler/SlugHandlerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Handler/SlugHandlerWithUniqueCallbackInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Handler/TreeSlugHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Mapping/Event/SluggableAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Sluggable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/SluggableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sluggable/Util/Urlizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Filter/ODM/SoftDeleteableFilter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Filter/SoftDeleteableFilter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Mapping/Event/SoftDeleteableAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Mapping/Validator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Query/TreeWalker/Exec/MultiTableDeleteExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Query/TreeWalker/SoftDeleteableWalker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/SoftDeleteable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/SoftDeleteableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Traits/SoftDeleteable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Traits/SoftDeleteableDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/SoftDeleteable/Traits/SoftDeleteableEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/Entity/Repository/SortableRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/Mapping/Event/SortableAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/Sortable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Sortable/SortableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Mapping/Event/TimestampableAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Timestampable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/TimestampableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Traits/Timestampable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Traits/TimestampableDocument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Traits/TimestampableEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tool/Logging/DBAL/QueryAnalyzer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tool/Wrapper/AbstractWrapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tool/Wrapper/EntityWrapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tool/Wrapper/MongoDocumentWrapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tool/WrapperInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Document/MappedSuperclass/AbstractPersonalTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Document/MappedSuperclass/AbstractTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Document/Repository/TranslationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Document/Translation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity/MappedSuperclass/AbstractPersonalTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity/MappedSuperclass/AbstractTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity/Repository/TranslationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity/Translation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Hydrator/ORM/ObjectHydrator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Hydrator/ORM/SimpleObjectHydrator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Mapping/Event/TranslatableAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Query/TreeWalker/TranslationWalker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Translatable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/TranslatableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Document/Translation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Entity/Translation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Translation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/TranslationInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/TranslationProxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Document/MongoDB/Repository/AbstractTreeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Document/MongoDB/Repository/MaterializedPathRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity/MappedSuperclass/AbstractClosure.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity/Repository/AbstractTreeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity/Repository/ClosureTreeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity/Repository/MaterializedPathRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity/Repository/NestedTreeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Hydrator/ORM/TreeObjectHydrator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Mapping/Event/Adapter/ODM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Mapping/Event/Adapter/ORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Mapping/Event/TreeAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Mapping/Validator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Node.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/RepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/RepositoryUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/RepositoryUtilsInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Strategy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Strategy/AbstractMaterializedPath.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Strategy/ODM/MongoDB/MaterializedPath.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Strategy/ORM/Closure.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Strategy/ORM/MaterializedPath.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Strategy/ORM/Nested.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Traits/MaterializedPath.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Traits/NestedSet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Traits/NestedSetEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Traits/NestedSetEntityUuid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/TreeListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Event/UploadableBaseEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Event/UploadablePostFileProcessEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Event/UploadablePreFileProcessEventArgs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Events.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/FileInfo/FileInfoArray.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/FileInfo/FileInfoInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/FilenameGenerator/FilenameGeneratorAlphanumeric.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/FilenameGenerator/FilenameGeneratorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/FilenameGenerator/FilenameGeneratorSha1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Mapping/Driver/Annotation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Mapping/Driver/Xml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Mapping/Driver/Yaml.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Mapping/Validator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/MimeType/MimeTypeGuesser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/MimeType/MimeTypeGuesserInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/MimeType/MimeTypesExtensionsMap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/Uploadable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Uploadable/UploadableListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/schemas/orm/doctrine-extensions-mapping-2-1.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/schemas/orm/doctrine-extensions-mapping-2-2.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/DependencyInjection/Compiler/SecurityContextPass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/DependencyInjection/Compiler/ValidateExtensionConfigurationPass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/DependencyInjection/Configuration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/DependencyInjection/StofDoctrineExtensionsExtension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/EventListener/BlameListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/EventListener/LocaleListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/EventListener/LoggerListener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/README.markdown" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/Resources/config/listeners.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/Resources/doc/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/StofDoctrineExtensionsBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/Upgrade_to_1_1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/Uploadable/MimeTypeGuesserAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/Uploadable/UploadableManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/Uploadable/UploadedFileInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/meurtelle54.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meurtelle54.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Tests/Controller/DefaultControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +517,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="vertical" split-proportion="0.825779">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.72118646">
+        <splitter split-orientation="horizontal" split-proportion="0.22023809">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
@@ -90,15 +584,23 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="204">
-                      <caret line="22" selection-start-line="22" selection-end-line="22" />
+                    <state relative-caret-position="408">
+                      <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
                       <folding>
                         <element signature="e#244#289#0#PHP" expanded="true" />
-                        <element signature="e#611#926#0#PHP" expanded="true" />
                       </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/composer.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state>
+                      <caret line="12" column="6" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="6" />
                     </state>
                   </provider>
                 </entry>
@@ -127,14 +629,23 @@
             </leaf>
           </split-first>
           <split-second>
-            <splitter split-orientation="vertical" split-proportion="0.6360294">
+            <splitter split-orientation="vertical" split-proportion="0.16627078">
               <split-first>
                 <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-                  <file pinned="false" current-in-tab="true">
+                  <file pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="85">
+                        <state relative-caret-position="32">
                           <caret line="9" selection-start-line="9" selection-end-line="9" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="68">
+                          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
                         </state>
                       </provider>
                     </entry>
@@ -142,8 +653,17 @@
                   <file pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="561">
+                        <state relative-caret-position="219">
                           <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state>
+                          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
                         </state>
                       </provider>
                     </entry>
@@ -166,11 +686,32 @@
               </split-first>
               <split-second>
                 <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-                  <file pinned="false" current-in-tab="true">
+                  <file pinned="false" current-in-tab="false">
                     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="31">
-                          <caret line="11" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+                        <state relative-caret-position="52">
+                          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="103">
+                          <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
+                          <folding>
+                            <element signature="n#registerContainerConfiguration#0;n#AppKernel#0;n#!!top" expanded="true" />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="96">
+                          <caret line="251" column="30" selection-start-line="251" selection-start-column="30" selection-end-line="251" selection-end-column="30" />
                         </state>
                       </provider>
                     </entry>
@@ -203,7 +744,11 @@
           </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/menu.html.twig">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret line="8" column="5" lean-forward="true" selection-start-column="51" selection-end-line="8" selection-end-column="5" />
+                </state>
+              </provider>
             </entry>
           </file>
         </leaf>
@@ -249,7 +794,6 @@
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/add.html.twig" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/edit.html.twig" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Repository/AdvertRepository.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Repository/ApplicationRepository.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadCategory.php" />
@@ -263,17 +807,19 @@
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadAdvert.php" />
         <option value="$PROJECT_DIR$/app/config/config_test.yml" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/index.html.twig" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Advert.php" />
         <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/views/recepAppliAdvert.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/ApplicationMailer.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Antispam/Antispam.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
       </list>
     </option>
   </component>
@@ -318,6 +864,9 @@
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -555,7 +1104,7 @@
       <workItem from="1545988680969" duration="628000" />
       <workItem from="1545990631179" duration="19793000" />
       <workItem from="1546167574149" duration="18974000" />
-      <workItem from="1546241301838" duration="1118000" />
+      <workItem from="1546241301838" duration="5550000" />
     </task>
     <task id="LOCAL-00001" summary="create repository Vcs git for project symfony with OpenClassroom">
       <created>1542209791663</created>
@@ -627,11 +1176,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546184724982</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="create antispam service and use in controler Advert addAction">
+      <created>1546354592833</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1546354592833</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167676000" />
+    <option name="totallyTimeSpent" value="172108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -661,7 +1217,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4986577" weight="0.27478755" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013423" side_tool="true" weight="0.27478755" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" weight="0.5347518" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" visible="true" weight="0.30169973" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -745,30 +1301,11 @@
     <MESSAGE value="clear depot git because error yesterday" />
     <MESSAGE value="create methode getUpdateDate setUpdateDate in entity advert" />
     <MESSAGE value="layout body html send mail in ApplicationMailer" />
-    <option name="LAST_COMMIT_MESSAGE" value="layout body html send mail in ApplicationMailer" />
+    <MESSAGE value="create antispam service and use in controler Advert addAction" />
+    <MESSAGE value="install extension doctrine StofDoctrineExtensionsBundle" />
+    <option name="LAST_COMMIT_MESSAGE" value="install extension doctrine StofDoctrineExtensionsBundle" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/Advert/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-264">
@@ -959,13 +1496,6 @@
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -988,13 +1518,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/recepAppliAdvert" />
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/views/recepAppliAdvert.html.twig" />
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-125">
@@ -1096,20 +1619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1119,13 +1628,6 @@
             <element signature="e#287#438#0#PHP" expanded="true" />
             <element signature="e#626#724#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="11" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1143,16 +1645,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/menu.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="408">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
           <folding>
             <element signature="e#244#289#0#PHP" expanded="true" />
-            <element signature="e#611#926#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/Core/menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="8" column="5" lean-forward="true" selection-start-column="51" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="251" column="30" selection-start-line="251" selection-start-column="30" selection-end-line="251" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
+          <folding>
+            <element signature="n#registerContainerConfiguration#0;n#AppKernel#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,16 +1,14 @@
 # This file is auto-generated during the composer install
 parameters:
-    #DATA BASE SQL
     database_host: 127.0.0.1
     database_port: null
     database_name: symfony
     database_user: root
     database_password: null
-
     #SERVICE SWIFT_MAILER
     mailer_transport: gmail
     mailer_host: smtp.gmail.com
+    mailer_port: 465
     mailer_user: charly.learn@gmail.com
     mailer_password: PASSWORD
-    mailer_port: 465
     secret: 86ac8b0c32085d740682cb1e9fb7b7b55282f32b

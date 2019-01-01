@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new CHARLY\PlatformBundle\CHARLYPlatformBundle(),
             new CHARLY\CoreBundle\CHARLYCoreBundle(),
             new CHARLY\NewsBundle\CHARLYNewsBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
