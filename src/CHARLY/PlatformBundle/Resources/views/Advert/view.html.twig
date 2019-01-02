@@ -31,6 +31,7 @@
         {% endif %}
 
     </div>
+
     {% if listSkills|length > 0 %}
         <div >
             <p style="color: white">Cette annonce requiert les compétences suivantes : </p>
@@ -41,23 +42,24 @@
             </ul>
         </div>
     {% endif %}
+
         <div id="containAppli">
             <h3>
-    {% if listApplication %}
+    {% if not advert.getApplications.empty %}
         Candidatures à l'offre d'emplois
     {% else %}
         Pas encore de candidature
     {% endif %}
             </h3>
-    {% for application in listApplication %}
-        <div class="application" style="border-radius: 10px 0px">
-            <p>{{ application.getContent }}</p>
-            <p>
-                {{ application.getAuthor }} Le :
-                {{ application.getDate|date('d/m/Y') }}
-            </p>
-        </div>
-    {% endfor %}
+            {% for application in advert.getApplications %}
+                <div class="application" style="border-radius: 10px 0px">
+                    <p>{{ application.getContent }}</p>
+                    <p>
+                        {{ application.getAuthor }} Le :
+                        {{ application.getDate|date('d/m/Y') }}
+                    </p>
+                </div>
+            {% endfor %}
     </div>
 
 

@@ -29,7 +29,7 @@ class LoadCategory implements FixtureInterface
         //$manager->flush();
     }
 
-    public static function createCategory($manager)
+    public static function createCategories($manager)
     {
         $categories = NULL;
         $names = array(

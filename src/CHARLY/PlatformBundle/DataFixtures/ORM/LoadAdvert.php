@@ -16,6 +16,7 @@ namespace CHARLY\PlatformBundle\DataFixtures\ORM;
 use CHARLY\PlatformBundle\Entity\Application;
 use CHARLY\PlatformBundle\Entity\Advert;
 use CHARLY\PlatformBundle\Entity\Image;
+use CHARLY\PlatformBundle\Entity\Skill;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -25,7 +26,9 @@ class LoadAdvert implements FixtureInterface
     {
         $adverts = $this->dataAdvert();
 
-        $categories = LoadCategory::createCategory($manager);
+        $categories = LoadCategory::createCategories($manager);
+
+        $skills = LoadSkill::createSkills($manager);
 
         foreach ($adverts as $advert){
             //On créer les annonces
@@ -44,7 +47,12 @@ class LoadAdvert implements FixtureInterface
                 foreach($advert['categories'] as $category)
                     $ad->addCategory($categories[$category]);
             }
-
+            if(isset($advert['skills'])){
+                foreach($advert['skills'] as $skill)
+                    $skill;
+                    //todo apres avoir fait la relation bidirectionnel advertSkill
+                    //$ad->addSkill($skills[$skill]);
+            }
             $ad->setImage($image);
             if(isset($advert['applications'])){
                 foreach ($advert['applications'] as $application){
@@ -53,7 +61,7 @@ class LoadAdvert implements FixtureInterface
                     $apply->setAuthor($application['author']);
                     isset($application['email']) ? $apply->setEmail($application['email']) : '';
 
-                    $apply->setAdvert($ad);
+                    $ad->addApplication($apply);
                     $manager->persist($apply);
 
                     
@@ -148,7 +156,8 @@ class LoadAdvert implements FixtureInterface
                         'email' => 'contact@charles-tognol.fr'
                     ]
                 ],
-                'categories' => ['Développement web', 'Développement mobile', 'Graphisme', 'Intégration', 'Réseau']
+                'categories' => ['Développement web', 'Développement mobile', 'Graphisme', 'Intégration', 'Réseau'],
+                'skills' => ['PHP', 'SYMFONY', 'C++', 'JAVA', 'PHOTOSHOP', 'BLENDER', 'BLOC-NOTE']
             ]
         );
     }

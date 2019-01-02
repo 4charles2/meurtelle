@@ -21,6 +21,8 @@ class LoadSkill implements FixtureInterface
 {
     public function load(ObjectManager $manager)
     {
+        //Decommenter lorsque la fixture advert ne sera plus necessaire
+        /*
         // Listes des noms de compétences
         $names = array('PHP', 'SYMFONY', 'C++', 'JAVA', 'PHOTOSHOP', 'BLENDER', 'BLOC-NOTE');
 
@@ -32,5 +34,27 @@ class LoadSkill implements FixtureInterface
         }
 
         $manager->flush();
+        */
+    }
+    public static function createSkills(ObjectManager $manager){
+        //Utile afin d'utiliser les skills dans la fixture advert
+        //Car sinon les skills n'etais pas encore créer
+        $skills = null;
+        $names = [
+            'PHP',
+            'SYMFONY',
+            'C++',
+            'JAVA',
+            'PHOTOSHOP',
+            'BLENDER',
+            'BLOC-NOTE'
+        ];
+        foreach ($names as $name){
+            $skills[$name] = new Skill();
+            $skills[$name]->setName($name);
+
+            $manager->persist($skills[$names]);
+        }
+        return $skills;
     }
 }

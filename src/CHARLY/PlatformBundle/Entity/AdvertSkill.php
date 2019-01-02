@@ -26,6 +26,7 @@ class AdvertSkill
      *
      * @ORM\Column(name="level", type="string", length=255)
      */
+    //todo rendre cette relation bidirectionnel
     private $level;
     /**
      * @ORM\ManyToOne(targetEntity="CHARLY\PlatformBundle\Entity\Advert")

@@ -15,6 +15,7 @@ use CHARLY\PlatformBundle\Entity\Application;
 use CHARLY\PlatformBundle\Entity\Category;
 use CHARLY\PlatformBundle\Entity\Image;
 
+use CHARLY\PlatformBundle\Repository\AdvertRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -28,7 +29,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  */
 class AdvertController extends Controller
 {
-    protected $arrayOut = array('nom' => 'Charles');
 
     /**
      * Page d'acceuil de la partie offer d'emplois
@@ -63,16 +63,14 @@ class AdvertController extends Controller
         if(null === $advert)
             throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
 
-        //ON recupere la liste des candidatures de cette annoncez
-        $candidatures = $em->getRepository('CHARLYPlatformBundle:Application')
-                    ->findBy(array('advert' => $advert));
 
         $skills = $em->getRepository('CHARLYPlatformBundle:AdvertSkill')
                     ->findBy(array('advert' => $advert));
+
         return $this->render(
             'CHARLYPlatformBundle:Advert:view.html.twig',
-            array("advert" => $advert, 'listApplication' => $candidatures, 'listSkills' => $skills)
-        );
+            array("advert" => $advert, 'listSkills' => $skills));
+
     }
 
     /**
@@ -155,7 +153,6 @@ class AdvertController extends Controller
         $application->setAuthor('me');
         $application->setContent('Je suis la pour le test');
         $application->setAdvert($advert);
-
 
 
         $advert->addApplication($application);

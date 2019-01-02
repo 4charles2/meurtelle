@@ -12,7 +12,10 @@ use Doctrine\ORM\QueryBuilder;
  */
 class AdvertRepository extends \Doctrine\ORM\EntityRepository
 {
-
+    /**
+     * Return un advert avec toutes ces relations
+     * Return advert with skill and application and category and
+     **/
 
     //Jointure avec le queryBuilder
     public function getAdvertWithApplication()
@@ -22,11 +25,14 @@ class AdvertRepository extends \Doctrine\ORM\EntityRepository
             ->leftJoin('a.application', 'app')
             ->addSelect('app')
             ;
+        
 
         return $qb
             ->getQuery()
             ->getResult();
     }
+
+
     //Recupere toutes les annonces qui corresponde à une catégories
 
     /**
