@@ -10,5 +10,5 @@ parameters:
     mailer_host: smtp.gmail.com
     mailer_port: 465
     mailer_user: charly.learn@gmail.com
-    mailer_password: 4Charly2#Learn
+    mailer_password: Password
     secret: 86ac8b0c32085d740682cb1e9fb7b7b55282f32b
