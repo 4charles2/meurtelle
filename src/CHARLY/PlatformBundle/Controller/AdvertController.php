@@ -10,12 +10,6 @@ namespace CHARLY\PlatformBundle\Controller;
 
 
 use CHARLY\PlatformBundle\Entity\Advert;
-use CHARLY\PlatformBundle\Entity\AdvertSkill;
-use CHARLY\PlatformBundle\Entity\Application;
-use CHARLY\PlatformBundle\Entity\Category;
-use CHARLY\PlatformBundle\Entity\Image;
-
-use CHARLY\PlatformBundle\Repository\AdvertRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -37,17 +31,14 @@ class AdvertController extends Controller
      */
     function indexAction()
     {
-
-        $adverts = $this->getDoctrine()
-            ->getManager()
-            ->getRepository('CHARLYPlatformBundle:Advert')
-            ->findAll();
+//todo faire un test avec une annonce état published false
+        $advert = $this->getDoctrine()->getManager()->getRepository('CHARLYPlatformBundle:Advert')->getAdverts();
+        //getAdvertsWithImages();
 
         return $this->render('CHARLYPlatformBundle:Advert:index.html.twig',
-                             array('listAdverts' => $adverts)
+                             array('listAdverts' => $advert)
         );
     }
-
     /**
      * Afficher la description complète d'une annonce
      *
@@ -59,18 +50,12 @@ class AdvertController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->find($id);
-
         if(null === $advert)
             throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
 
-
-        $skills = $em->getRepository('CHARLYPlatformBundle:AdvertSkill')
-                    ->findBy(array('advert' => $advert));
-
         return $this->render(
             'CHARLYPlatformBundle:Advert:view.html.twig',
-            array("advert" => $advert, 'listSkills' => $skills));
-
+            array("advert" => $advert));
     }
 
     /**
@@ -113,18 +98,29 @@ class AdvertController extends Controller
         $em = $this->getDoctrine()->getManager();
         $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->find($id);
 
+        if($advert === NULL)
+            throw new NotFoundHttpException("Cette Annonce n'est pas présente en base de données ! ");
+
+        /*
+         * Je n'ai plus besoin de ce code mais present dans le cours OC je laisse au cas ou
+         * pour une utilité ultérieur !
+         *
         if ($advert->getCategories() ===  Null)
             throw new NotFoundHttpException('Cette annonce ne possede pas de category !');
 
         foreach ($advert->getCategories() as $category)
             $advert->removeCategory($category);
-
+        */
+        $em->remove($advert);
         $em->flush();
 
         $this->addFlash('info', 'Votre annonce à bien été suprimer');
 
-        return $this->forward('CHARLYPlatformBundle:Advert:index');
-        return $this->render('CHARLYPlatformBundle:Advert:index.html.twig', array('id' => $id));
+
+        //Redirection vers la page d'acceuil des offre d'emplois
+        return $this->redirectToRoute('charly_platform_homepage');
+        //forward est utile pour appeller un autre contrôler ou une autre méthode de this controller
+        //return $this->forward('CHARLYPlatformBundle:Advert:index');
     }
 
     /**
@@ -198,9 +194,9 @@ class AdvertController extends Controller
             ->getRepository('CHARLYPlatformBundle:Advert')
             ->findby(
                 array('published' => true),
-                array('date' => 'desc'),
+                array('date' => 'desc'), //Par date decroissante
                 $limit,
-                0
+                0 //A partir du premier
             );
 
         return $this->render('CHARLYPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $listAdverts));

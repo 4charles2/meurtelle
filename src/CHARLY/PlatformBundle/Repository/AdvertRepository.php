@@ -2,6 +2,7 @@
 
 namespace CHARLY\PlatformBundle\Repository;
 
+use Doctrine\ORM\Mapping;
 use Doctrine\ORM\QueryBuilder;
 
 /**
@@ -13,10 +14,95 @@ use Doctrine\ORM\QueryBuilder;
 class AdvertRepository extends \Doctrine\ORM\EntityRepository
 {
     /**
-     * Return un advert avec toutes ces relations
-     * Return advert with skill and application and category and
-     **/
+     * Va récupérer toutes les entités advert en base de données avec
+     * ces jointures
+     *
+     * @return array toutes les adverts en base de donnée
+     */
+    public function getAdverts()
+    {
+        $qb = $this->createQueryBuilder('a')
+            //Jointure sur l'attribut image
+            ->leftJoin('a.image', 'i')
+            ->addSelect('i')
+            //Jointure sur l'attribut categories
+            ->leftJoin('a.categories', 'c')
+            ->addSelect('c')
+            ->orderBy('a.date', 'DESC')
+            ;
 
+        return $qb->getQuery()->getResult();
+    }
+
+    public function getAdvert($id)
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->where('a.id = :id')
+            ->setParameter('id', $id)
+        ;
+        //Ajoute les tables en jointure
+        $this->addJoin($qb, ['a.image', 'a.categories']);
+
+        //Selectionne uniquement les entites correspondante
+        // avec l'advert id en parametre
+        $qb->andWhere('i.advert_id = :id')
+            ->setParameter('id', 'a.id')
+            ->andWhere('c.advert_id =:id')
+            ->setParameter('id', 'a.id')
+            ;
+        //todo effacer le commentaire ci-dessous si fonctionne
+            /*
+            ->leftJoin('a.image', 'i')
+            ->addSelect('i')
+            ->leftJoin('a.categories', 'c')
+            ->addSelect('c')
+            ;
+            */
+
+            return $qb->getQuery()->getResult();
+    }
+
+    /**
+     *  Ajoute les tables en jointure avec leftJoin
+     *  et les selectionnes addSelect
+     *
+     * @param QueryBuilder $qb
+     * @param              $names
+     */
+    public function addJoin(QueryBuilder $qb, $names){
+
+        if(is_array($names)){
+            foreach ($names as $name) {
+                $alias = preg_replace('/\.(.).*/', '$1', $name);
+                $qb->leftJoin($name, $alias)
+                    ->addSelect($alias);
+            }
+        }
+        else{
+            $alias = preg_replace('/\.(.).*/', '$1', $names);
+            $qb->leftJoin($names, $alias)
+                ->addSelect($alias);
+        }
+    }
+    //Jointure pour telecharger les images en même temps que les annonces
+    /**
+     * retun l'entite avec toute les annonces en incluant également les images
+     *
+     * @return Entity Advert with IMAGE
+     */
+
+    public function getAdvertsWithImages()
+    {
+        //todo faire un test juste avec andWhere
+        $qb = $this
+            ->createQueryBuilder('a')
+            ->leftJoin('a.image', 'img')
+            ->addSelect('img');
+
+            return $qb->getQuery()
+            ->getResult()
+            ;
+    }
     //Jointure avec le queryBuilder
     public function getAdvertWithApplication()
     {
@@ -148,7 +234,7 @@ class AdvertRepository extends \Doctrine\ORM\EntityRepository
     }
     */
 
-    //Requete DQl
+    /*Requete DQl
     public function myFindAllDQL()
     {
         $query = $this->_em->createQuery('SELECT a FROM CHARLYPlatformBundle:Advert a');
@@ -156,4 +242,5 @@ class AdvertRepository extends \Doctrine\ORM\EntityRepository
 
         return $results;
     }
+    */
 }

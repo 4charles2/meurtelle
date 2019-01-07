@@ -41,10 +41,13 @@ class Advert
     private $categories;
 
     /**
-     * @ORM\OneToMany(targetEntity="CHARLY\PlatformBundle\Entity\Application", mappedBy="advert")
+     * @ORM\OneToMany(targetEntity="CHARLY\PlatformBundle\Entity\Application", mappedBy="advert", cascade={"remove"})
      */
     private $applications;
-
+    /**
+     * @ORM\OneToMany(targetEntity="CHARLY\PlatformBundle\Entity\AdvertSkill", mappedBy="advert", cascade={"persist", "remove"})
+     */
+    private $skills;
     /**
      * @var \DateTime
      *
@@ -419,5 +422,40 @@ class Advert
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Add skill
+     *
+     * @param \CHARLY\PlatformBundle\Entity\AdvertSkill $skill
+     *
+     * @return Advert
+     */
+    public function addSkill(AdvertSkill $skill)
+    {
+        $this->skills[] = $skill;
+        $skill->setAdvert($this);
+    
+        return $this;
+    }
+
+    /**
+     * Remove skill
+     *
+     * @param \CHARLY\PlatformBundle\Entity\AdvertSkill $skill
+     */
+    public function removeSkill(AdvertSkill $skill)
+    {
+        $this->skills->removeElement($skill);
+    }
+
+    /**
+     * Get skills
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSkills()
+    {
+        return $this->skills;
     }
 }

@@ -13,6 +13,7 @@
 namespace CHARLY\PlatformBundle\DataFixtures\ORM;
 
 
+use CHARLY\PlatformBundle\Entity\AdvertSkill;
 use CHARLY\PlatformBundle\Entity\Application;
 use CHARLY\PlatformBundle\Entity\Advert;
 use CHARLY\PlatformBundle\Entity\Image;
@@ -48,10 +49,12 @@ class LoadAdvert implements FixtureInterface
                     $ad->addCategory($categories[$category]);
             }
             if(isset($advert['skills'])){
-                foreach($advert['skills'] as $skill)
-                    $skill;
-                    //todo apres avoir fait la relation bidirectionnel advertSkill
-                    //$ad->addSkill($skills[$skill]);
+                foreach($advert['skills'] as $key=>$skill) {
+                    $advtSkill = new AdvertSkill();
+                    $advtSkill->setSkill($skills[$key]);
+                    $advtSkill->setLevel($skill);
+                    $ad->addSkill($advtSkill);
+                }
             }
             $ad->setImage($image);
             if(isset($advert['applications'])){
@@ -157,7 +160,15 @@ class LoadAdvert implements FixtureInterface
                     ]
                 ],
                 'categories' => ['Développement web', 'Développement mobile', 'Graphisme', 'Intégration', 'Réseau'],
-                'skills' => ['PHP', 'SYMFONY', 'C++', 'JAVA', 'PHOTOSHOP', 'BLENDER', 'BLOC-NOTE']
+                'skills' => [
+                    'PHP' => 'EXPERT',
+                    'SYMFONY' => 'EXPERT',
+                    'C++' => 'EXPERT',
+                    'JAVA' => 'EXPERT',
+                    'PHOTOSHOP' => 'EXPERT',
+                    'BLENDER' => 'EXPERT',
+                    'BLOC-NOTE' => 'EXPERT'
+                ]
             ]
         );
     }

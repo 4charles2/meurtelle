@@ -21,6 +21,20 @@
 
         {{ advert.content }}
     </div>
+    <p>
+        <a href="{{ path('charly_platform_homepage') }} " class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à la liste des annonces
+        </a>
+        <a href="{{ path('charly_platform_edit', {'id': advert.id})  }} " class="btn btn-danger">
+            <i class="glyphicon glyphicon-edit"></i>
+            Modifier l'annonce
+        </a>
+        <a href="{{ path('charly_platform_delete', {'id': advert.id})  }} " class="btn btn-danger">
+            <i class="glyphicon glyphicon-trash"></i>
+            Suprimer l'annonce
+        </a>
+    </p>
     <div class="text-info">
         {% if not advert.getCategories.empty %}
             <p>Cette annonce est parue dans les  categories suivantes :
@@ -32,17 +46,16 @@
 
     </div>
 
-    {% if listSkills|length > 0 %}
+    {% if advert.getSkills()|length > 0 %}
         <div >
             <p style="color: white">Cette annonce requiert les compétences suivantes : </p>
             <ul class="list-inline" style="background-color: #d9d9d9; padding: 10px">
-            {% for  advertSkill in listSkills %}
-                <li style="margin-left: 12px"><strong>{{ advertSkill.skill.name }}</strong> : niveau <span style="color: #a4403b"> {{ advertSkill.level }}</span></li>
-            {% endfor %}
+                {% for  advertSkill in advert.getSkills %}
+                    <li style="margin-left: 12px"><strong>{{ advertSkill.skill.name }}</strong> : niveau <span style="color: #a4403b"> {{ advertSkill.level }}</span></li>
+                {% endfor %}
             </ul>
         </div>
     {% endif %}
-
         <div id="containAppli">
             <h3>
     {% if not advert.getApplications.empty %}
@@ -66,18 +79,5 @@
     <div>
 
     </div>
-    <p>
-        <a href="{{ path('charly_platform_homepage') }} " class="btn btn-default">
-            <i class="glyphicon glyphicon-chevron-left"></i>
-            Retour à la liste des annonces
-        </a>
-        <a href="{{ path('charly_platform_edit', {'id': advert.id})  }} " class="btn btn-danger">
-            <i class="glyphicon glyphicon-edit"></i>
-            Modifier l'annonce
-        </a>
-        <a href="{{ path('charly_platform_delete', {'id': advert.id})  }} " class="btn btn-danger">
-            <i class="glyphicon glyphicon-trash"></i>
-            Suprimer l'annonce
-        </a>
-    </p>
+
 {% endblock %}

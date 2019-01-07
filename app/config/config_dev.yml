@@ -7,9 +7,10 @@ framework:
         strict_requirements: true
     profiler: { only_exceptions: false }
 
+#Parametre pour le profiler
 web_profiler:
     toolbar: true
-    intercept_redirects: true
+    intercept_redirects: false
 
 monolog:
     handlers:

@@ -53,7 +53,7 @@ class LoadSkill implements FixtureInterface
             $skills[$name] = new Skill();
             $skills[$name]->setName($name);
 
-            $manager->persist($skills[$names]);
+            $manager->persist($skills[$name]);
         }
         return $skills;
     }
