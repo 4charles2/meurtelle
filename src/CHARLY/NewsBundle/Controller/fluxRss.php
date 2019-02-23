@@ -42,7 +42,8 @@ class fluxRss
     public function setflux(){
         $i = 0;
         foreach ($this->urls as $item) {
-            $flux[$i] = simplexml_load_file($item, "SimpleXMLElement", LIBXML_NOCDATA);
+
+            $flux[$i] = simplexml_load_file($item, "SimpleXMLElement", LIBXML_COMPACT); //LIBXML_NOCDATA
             if($flux[$i] == false)
                 throw new \exception("Le flux [ ".$item." ] n'à pas pu être chargé !");
 

@@ -169,7 +169,137 @@ class LoadAdvert implements FixtureInterface
                     'BLENDER' => 'EXPERT',
                     'BLOC-NOTE' => 'EXPERT'
                 ]
+            ],
+            [
+                'title' => 'Dev Mobile Switf',
+                'author' => 'you',
+                'email' =>  'charly.lean@gmail.com',
+                'content' => 'Vous savez developper des applications Swift Vous êtes au bon endroit',
+                'date' => new \DateTime('2005-02-15'),
+                'url' => '/image/headImg2.jpg',
+                'alt' => 'expert swift',
+                'applications' => [
+                    [
+                        'content' => 'Je suis expert en Swift',
+                        'author' => 'devSwift'
+                    ],
+                    [
+                        'content' => 'dev senior Swift',
+                        'author' => 'seniorDev'
+                    ],
+                    [
+                        'content' => 'developper junior Swift avec un avenir très prometteur',
+                        'author' => 'junior Dev'
+                    ]
+                ],
+                'categories' => ['Développement mobile'],
+                'skills' => [
+                    'SWIFT' => 'EXPERT'
+                ]
+            ],
+            [
+                'title' => 'DATA SCIENTIST',
+                'author' => 'SQL',
+                'email' =>  'SQL@mysql.fr',
+                'content' => 'Créer des requêtes SQL manipuler les bases de données et savoir lire les informations',
+                'date' => new \DateTime(),
+                'url' => '/image/headImg2.jpg',
+                'alt' => 'expert SQL',
+                'applications' => [
+                    [
+                        'content' => 'JE passe ma vie dans une console SQL',
+                        'author' => 'sql'
+                    ],
+                    [
+                        'content' => "requête SQL c'est mon deuxieme prenom",
+                        'author' => 'requestSQL'
+                    ],
+                    [
+                        'content' => "mySql it's my father",
+                        'author' => 'mysql Junior'
+                    ]
+                ],
+                'categories' => ['BIG DATA'],
+                'skills' => [
+                    'SQL' => 'EXPERT'
+                ]
+            ],
+            [
+                'title' => 'Application Java',
+                'author' => 'JavaTeur',
+                'email' =>  'java@oracle.fr',
+                'content' => "Création d'application java multi-plateforme",
+                'date' => new \DateTime(),
+                'url' => '/image/headImg2.jpg',
+                'alt' => 'app java',
+                'applications' => [
+                    [
+                        'content' => 'Je connais toutes les api et lib java ainsi que tous les designs pattern ',
+                        'author' => 'javadit'
+                    ],
+                    [
+                        'content' => "Je suis passionné par le langage Java",
+                        'author' => 'javalike'
+                    ],
+                    [
+                        'content' => "the java it's my life",
+                        'author' => 'javalife'
+                    ]
+                ],
+                'categories' => ['Application'],
+                'skills' => [
+                    'JAVA' => 'EXPERT'
+                ]
+            ],
+            [
+                'title' => 'Developpeur Web',
+                'author' => 'siteFR',
+                'email' => 'contact@site.fr',
+                'content' => "Je recherche un developpeur Web pour créer le site de l'entreprise puis ensuite le maintenir et y créer le contenu",
+                'date' => new \DateTime("2019-01-01"),
+                'url' => '/image/headImg2.jpg',
+                'alt' => 'wed dev',
+                'applications' => [
+                    [
+                        'content' => "J'ai à mon actif la création d'une dizaine de site. Je remplie humblement vos critères",
+                        'author' => 'webdev'
+                    ],
+                    [
+                        'content' => 'Je maintiens plusieurs site quotidienement ',
+                        'author' => 'webmaster'
+                    ]
+                ],
+                'categories' => ['Développement web', 'Graphisme', 'Intégration'],
+                'skills' => [
+                    'PHP' => 'DEBUTANT',
+                    'PHOTOSHOP' => 'INTERMEDIAIRE',
+                ]
+            ],
+            [
+                'title' => 'integrateur',
+                'author' => 'integrator',
+                'email' => 'integrator@site.fr',
+                'content' => "Je recherche un integrateur qui integrera les outils developper par l'équipe des developpeur",
+                'date' => new \DateTime("2019-01-01"),
+                'url' => '/image/headImg2.jpg',
+                'alt' => 'integrateur',
+                'applications' => [
+                    [
+                        'content' => "J'ai une expérience d'integrateur assez significative et je pense convenir à vos besoins",
+                        'author' => 'integ auto didacte'
+                    ],
+                    [
+                        'content' => "Cela fait déjà 5 années que j'integre des outils sur diffèrents site",
+                        'author' => 'integrateur pro'
+                    ]
+                ],
+                'categories' => ['Développement web', 'Intégration'],
+                'skills' => [
+                    'PHP' => 'INTERMEDIAIRE',
+                    'SYMFONY' => 'INTERMEDIAIRE'
+                ]
             ]
+
         );
     }
 }

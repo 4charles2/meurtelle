@@ -8,9 +8,9 @@
 
     <div>
         <div style="display: flex; background-color: #cccccc">
-        {% if advert.image is not null %}
-            <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}" width="10%">
-        {% endif %}
+            {% if advert.image is not null %}
+                <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}" width="10%">
+            {% endif %}
             <div style="padding-left: 13px; padding-bottom: 13px;">
                 <h2>{{ advert.title }}</h2>
                 <cite>Par {{ advert.author }}, Le {{ advert.date|date('d/m/Y') }}</cite>
@@ -46,7 +46,7 @@
 
     </div>
 
-    {% if advert.getSkills()|length > 0 %}
+    {% if advert.getSkills|length > 0 %}
         <div >
             <p style="color: white">Cette annonce requiert les compétences suivantes : </p>
             <ul class="list-inline" style="background-color: #d9d9d9; padding: 10px">

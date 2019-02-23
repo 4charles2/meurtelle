@@ -37,7 +37,9 @@ class LoadCategory implements FixtureInterface
             'Développement mobile',
             'Graphisme',
             'Intégration',
-            'Réseau'
+            'Réseau',
+            'BIG DATA',
+            'Application'
         );
         foreach ($names as $name){
             //On crée la catégorie

@@ -4,6 +4,7 @@ namespace CHARLY\PlatformBundle\Repository;
 
 use Doctrine\ORM\Mapping;
 use Doctrine\ORM\QueryBuilder;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * AdvertRepository
@@ -13,53 +14,65 @@ use Doctrine\ORM\QueryBuilder;
  */
 class AdvertRepository extends \Doctrine\ORM\EntityRepository
 {
+
     /**
-     * Va récupérer toutes les entités advert en base de données avec
-     * ces jointures
+     *
      *
      * @return array toutes les adverts en base de donnée
      */
-    public function getAdverts()
+    /**
+     * Va récupérer toutes les entités advert en base de données avec
+     * ces jointures puis retourne une pagination
+     * @param $page
+     * @param $nbPerPage
+     *
+     * @return Paginator
+     */
+    public function getAdverts($page, $nbPerPage)
     {
-        $qb = $this->createQueryBuilder('a')
+        $qb = $this->createQueryBuilder('a');
             //Jointure sur l'attribut image
-            ->leftJoin('a.image', 'i')
-            ->addSelect('i')
-            //Jointure sur l'attribut categories
-            ->leftJoin('a.categories', 'c')
-            ->addSelect('c')
-            ->orderBy('a.date', 'DESC')
-            ;
+        $this->addJoin($qb, [
+            "a.image",
+            "a.categories"]);
+        //Ne fonctionne plus leve une erreur "INCOMPATIBLE AVEC DISTINCT
+        //sql-mode = "" dans le fichier /etc/mysql/my.cnf
+        //TRES DECONSEILLER CAR desactive le mode sans echec et ne leve plus certaines erreur
+        //$qb->orderBy('a.date', 'DESC');
+        $qb = $qb->getQuery();
 
-        return $qb->getQuery()->getResult();
+        $qb
+            //Définit l'annonce à partir de laquelle commencer la liste
+            ->setFirstResult(($page-1) * $nbPerPage)
+            //Ainsi que le nombre d'annonce à afficher sur une page
+            ->setMaxResults($nbPerPage);
+        //Je retourne l'objet Paginator correspondant à la requête construite
+        //Mettre les use correspondant en début de fichier
+        return new Paginator($qb, true);
+
     }
 
-    public function getAdvert($id)
+    /**
+     * @param $id
+     *
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
+    public function getAdvertAllInfos($id)
     {
         $qb = $this->createQueryBuilder('a')
             ->where('a.id = :id')
-            ->setParameter('id', $id)
-        ;
-        //Ajoute les tables en jointure
-        $this->addJoin($qb, ['a.image', 'a.categories']);
+            ->setParameter('id', $id);
 
-        //Selectionne uniquement les entites correspondante
-        // avec l'advert id en parametre
-        $qb->andWhere('i.advert_id = :id')
-            ->setParameter('id', 'a.id')
-            ->andWhere('c.advert_id =:id')
-            ->setParameter('id', 'a.id')
-            ;
-        //todo effacer le commentaire ci-dessous si fonctionne
-            /*
-            ->leftJoin('a.image', 'i')
-            ->addSelect('i')
-            ->leftJoin('a.categories', 'c')
-            ->addSelect('c')
-            ;
-            */
+            $this->addJoin($qb, [
+                "a.image",
+                "a.categories",
+                "a.applications",
+                "a.skills",
+                "ask.skill"
+            ]);
 
-            return $qb->getQuery()->getResult();
+            return $qb->getQuery()->getOneOrNullResult();
     }
 
     /**
@@ -71,17 +84,13 @@ class AdvertRepository extends \Doctrine\ORM\EntityRepository
      */
     public function addJoin(QueryBuilder $qb, $names){
 
-        if(is_array($names)){
-            foreach ($names as $name) {
-                $alias = preg_replace('/\.(.).*/', '$1', $name);
-                $qb->leftJoin($name, $alias)
-                    ->addSelect($alias);
-            }
-        }
-        else{
-            $alias = preg_replace('/\.(.).*/', '$1', $names);
+        if(is_array($names))
+            foreach ($names as $name)
+                $this->addJoin($qb, $name);
+        else {
+            $alias = preg_replace('/\.(..).*/', '$1', $names);
             $qb->leftJoin($names, $alias)
-                ->addSelect($alias);
+               ->addSelect($alias);
         }
     }
     //Jointure pour telecharger les images en même temps que les annonces

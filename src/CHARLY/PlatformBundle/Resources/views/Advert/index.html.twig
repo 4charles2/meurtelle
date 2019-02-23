@@ -12,7 +12,8 @@
     <h2>Liste des annonces !</h2>
     <section>
         <ul class="containAdvert" >
-        {% for advert in listAdverts %}
+
+            {% for advert in listAdverts %}
 
                 <li class="liAdvert" style="list-style-type: none; border: 1px solid darkslategray; margin-bottom: 20px; padding: 20px">
 
@@ -27,6 +28,13 @@
         {% else %}
             <li class="liAdvert" style="border: 2px solid darkslategray; margin-bottom: 20px">Pas encore d'annonce en ligne <a href="{{ path('charly_platform_add') }}">Ajouter la votre</a></li>
         {% endfor %}
-            </ul>
+        </ul>
+        <ul class="pagination">
+        {%  for p in range(1, nbPages) %}
+            <li{% if p == page %} class="active" {% endif%}>
+                <a href="{{ path('charly_platform_homepage', {'page': p}) }}"> {{ p }}</a>
+            </li>
+        {% endfor %}
+        </ul>
     </section>
 {% endblock %}

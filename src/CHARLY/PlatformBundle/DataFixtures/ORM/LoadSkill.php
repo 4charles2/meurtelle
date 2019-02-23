@@ -47,7 +47,10 @@ class LoadSkill implements FixtureInterface
             'JAVA',
             'PHOTOSHOP',
             'BLENDER',
-            'BLOC-NOTE'
+            'BLOC-NOTE',
+            'SWIFT',
+            'ANDROID',
+            'SQL'
         ];
         foreach ($names as $name){
             $skills[$name] = new Skill();

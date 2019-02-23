@@ -37,9 +37,9 @@ class Advert
 
     /**
      * @ORM\ManyToMany(targetEntity="CHARLY\PlatformBundle\Entity\Category", cascade={"persist"})
+     * @ORM\JoinTable(name="advert_category")
      */
     private $categories;
-
     /**
      * @ORM\OneToMany(targetEntity="CHARLY\PlatformBundle\Entity\Application", mappedBy="advert", cascade={"remove"})
      */

@@ -10,6 +10,8 @@ namespace CHARLY\PlatformBundle\Controller;
 
 
 use CHARLY\PlatformBundle\Entity\Advert;
+use CHARLY\PlatformBundle\Entity\Application;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -25,18 +27,35 @@ class AdvertController extends Controller
 {
 
     /**
-     * Page d'acceuil de la partie offer d'emplois
+     * Page d'acceuil de la partie offre d'emplois
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    function indexAction()
+    function indexAction($page)
     {
-//todo faire un test avec une annonce état published false
-        $advert = $this->getDoctrine()->getManager()->getRepository('CHARLYPlatformBundle:Advert')->getAdverts();
+        if($page < 1)
+            throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+
+        $nbPerPage = 4;
+        //todo faire un test avec une annonce état published false
+        //Recupere toutes les annonces et renvoie un object paginator avec une nombre d'annonces limit de 5 par page
+        $listAdverts = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('CHARLYPlatformBundle:Advert')
+            ->getAdverts($page, $nbPerPage);
         //getAdvertsWithImages();
 
+        //Calcul le nombre total de pages grâce au count($listAdverts) qui retourne le nombre total d'annonces
+        $nbPages = ceil(count($listAdverts)/$nbPerPage);
+
+        if($page > $nbPages)
+            throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+
         return $this->render('CHARLYPlatformBundle:Advert:index.html.twig',
-                             array('listAdverts' => $advert)
+                             array('listAdverts' => $listAdverts,
+                                   'nbPages'     => $nbPages,
+                                   'page'        => $page
+                                  )
         );
     }
     /**
@@ -49,7 +68,9 @@ class AdvertController extends Controller
     function viewAction($id){
         $em = $this->getDoctrine()->getManager();
 
-        $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->find($id);
+        $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->getAdvertAllInfos($id);
+            //->find($id);
+
         if(null === $advert)
             throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
 
@@ -69,16 +90,12 @@ class AdvertController extends Controller
     function editAction(Request $request, $id){
         $em = $this->getDoctrine()->getManager();
 
-        $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->find($id);
-        $listCategorys = $em->getRepository('CHARLYPlatformBundle:Category')->findAll();
+        $advert = $em->getRepository('CHARLYPlatformBundle:Advert')->getAdvertAllInfos($id);
 
         if($advert === null)
             throw new NotFoundHttpException("L'annonce ".$id." n'héxiste pas !");
 
-        foreach ($listCategorys as $category){
-            $advert->addCategory($category);
-        }
-        $em->flush();
+
         if($request->isMethod('POST')){
             $this->addFlash('info', 'Votre annonce à bien été modifié');
 
@@ -136,7 +153,7 @@ class AdvertController extends Controller
         $advert = new Advert();
 
         $advert->setAuthor('TOGNOL Charles');
-        $advert->setContent('Mon annonce creer dans le controleur');
+        $advert->setContent('Mon annonce creer dans le controleur je ne suis plus un spam hahaha hihihi');
         $advert->setTitle('Test du service Application Mailler');
 
         $advert->setEmail('charly.learn@gmail.com');
@@ -153,18 +170,18 @@ class AdvertController extends Controller
 
         $advert->addApplication($application);
 
-        //GET SERVICE ANTISPAM
+        //GET SERVICE ANTISPAM Si le text fait moins de 50 caractères alors l'annonce est considéré comme un spam
         $antiSpam = $this->container->get('charly_platform.antispam');
 
-        $em->persist($advert);
-        $em->persist($application);
+        if($antiSpam->isSpam($advert->getContent())) {
+            $em->detach($advert);
+            $em->detach($application);
 
-        if($antiSpam->isSpam($advert->getContent())){
-            $em->refresh($advert);
-            $em->refresh($application);
             throw new \Exception('Votre Annonce à été detecté comme un spam');
+        }else{
+            $em->persist($advert);
+            $em->persist($application);
         }
-
 
         $em->flush();
 
@@ -200,7 +217,6 @@ class AdvertController extends Controller
             );
 
         return $this->render('CHARLYPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $listAdverts));
-
     }
 
 }
