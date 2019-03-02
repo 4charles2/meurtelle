@@ -14,9 +14,7 @@ services:
     class: CHARLY\PlatformBundle\Purger\AdvertPurger
     arguments:
       - "@mailer"
-      #- "@doctrine.orm.default_entity_manager"
       - "@doctrine.orm.entity_manager"
-      #- "@doctrine"
 
   charly_platform.email.application_mailer:
     class: CHARLY\PlatformBundle\Email\ApplicationMailer
