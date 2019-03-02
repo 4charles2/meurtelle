@@ -18,7 +18,10 @@
 .boxShadow{
     box-shadow: 21px 22px 7px -23px black, -21px 24px 7px -23px black;
 }
-
+.insetShadow{
+    box-shadow: inset 10px 10px 15px -5px rgb(168, 168, 168),
+                inset -10px -10px 15px -5px rgb(168, 168, 168);
+}
 .maxWidth-child h6{
     padding: 5px;
     background-color: #fef689;

@@ -21,16 +21,22 @@ class ApplicationMailer
      * @var \Swift_Mailer
      */
     private $mailer;
+    /**
+     * @var email
+     */
+    private $email;
 
     /**
      * ApplicationMailer constructor.
      *
      * @param \Swift_Mailer $mailer
      */
-    public function __construct(\Swift_Mailer $mailer) {
+    public function __construct(\Swift_Mailer $mailer, $email) {
         $this->mailer = $mailer;
+        $this->email = $email;
     }
-
+    //TODO Verifier que les dernières modification d'envoie d'un email fonctionne
+    //add name from and email parameter service on addTo
     /**
      * @param application $application
      */
@@ -38,7 +44,7 @@ class ApplicationMailer
         if($application->getAdvert()->getEmail() != NULL ) {
             $message = (new \Swift_Message('Nouvelle candidature'))
                 ->addTo($application->getAdvert()->getEmail())
-                ->addFrom('admin@charles-tognol.fr')
+                ->addFrom($this->email)
                 ->setBody(
                     '<div>
                         <h1>Vous avez reçu une nouvelle candidature</h1>'

@@ -16,10 +16,24 @@ class AdvertRepository extends \Doctrine\ORM\EntityRepository
 {
 
     /**
+     * Retourne toutes les annonces créer avant la date $days
+     * et qui ont 0 candidature
      *
+     * @param $days
      *
-     * @return array toutes les adverts en base de donnée
+     * @return array
      */
+    public function getDateLT($limit_date){
+        $qb = $this->createQueryBuilder('a')
+            ->where('a.date <= :date')
+            ->setParameter('date', $limit_date)
+            ->andWhere('a.applications IS EMPTY');
+            //Fonctionne également avec
+            //->andWhere('a.nbApplications = 0');
+        $this->addJoin($qb,["a.applications", "a.skills"]);
+
+        return $qb->getQuery()->getResult();
+    }
     /**
      * Va récupérer toutes les entités advert en base de données avec
      * ces jointures puis retourne une pagination
@@ -53,6 +67,8 @@ class AdvertRepository extends \Doctrine\ORM\EntityRepository
     }
 
     /**
+     * array all les adverts en base de donnée
+     *
      * @param $id
      *
      * @return mixed

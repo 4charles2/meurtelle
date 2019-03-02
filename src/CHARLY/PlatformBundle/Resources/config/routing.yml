@@ -33,3 +33,9 @@ charly_platform_edit:
         _controller: CHARLYPlatformBundle:Advert:edit
     requirements:
         id: \d+
+charly_platform_purge:
+    path: /purge/{days}
+    defaults:
+        _controller: CHARLYPlatformBundle:Advert:purge
+    requirements:
+        days: \d+

@@ -26,6 +26,9 @@ class ApplicationCreationListener
         $this->applicationMailer = $applicationMailer;
     }
 
+    /**
+     * @param LifecycleEventArgs $args
+     */
     public function postPersist(LifecycleEventArgs $args)
     {
         $entity = $args->getObject();
@@ -34,7 +37,10 @@ class ApplicationCreationListener
         if(!$entity instanceof Application){
             return;
         }
-
-        $this->applicationMailer->sendNewnotification($entity);
+        try {
+            $this->applicationMailer->sendNewnotification($entity);
+        }catch(\Swift_SwiftException $e){
+            echo "Erreur lors de l'envoie de l'email ".$e->getMessage();
+        }
     }
 }

@@ -15,6 +15,12 @@ namespace CHARLY\PlatformBundle\Antispam;
 
 class Antispam
 {
+    private $minLength;
+
+    function __construct($minLength) {
+        $this->minLength = $minLength;
+    }
+
     /**
      * Return true si text et plus petit que 50 caractere et false sinon
      * @param $text
@@ -23,6 +29,6 @@ class Antispam
      */
     public function isSpam($text)
     {
-        return strlen($text) < 50;
+        return strlen($text) < $this->minLength;
     }
 }

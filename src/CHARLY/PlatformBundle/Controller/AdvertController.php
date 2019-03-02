@@ -192,7 +192,7 @@ class AdvertController extends Controller
             //ON affiche la page de l'annonce créer
             return $this->redirectToRoute('charly_platform_view');
         }
-        //Si la requete n'est pas en POST alors on affiche le formulaire
+        //Si la requête n'est pas en POST alors on affiche le formulaire
         return $this->render('CHARLYPlatformBundle:Advert:add.html.twig');
     }
 
@@ -218,5 +218,15 @@ class AdvertController extends Controller
 
         return $this->render('CHARLYPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $listAdverts));
     }
-
+    function purgeAction($days){
+        $list_delete_adverts = null;
+        if($days > 0) {
+            $advertPurge = $this->get('charly_platform.purger.advert');
+            $list_delete_adverts = $advertPurge->purge($days);
+        }
+        $date_limit = date('Y-m-d H:i:s',strtotime('-'.$days." day"));
+        return $this->render('CHARLYPlatformBundle:Advert:purge.html.twig',
+            array("limit_date" => $date_limit,
+                "adverts" => $list_delete_adverts));
+    }
 }

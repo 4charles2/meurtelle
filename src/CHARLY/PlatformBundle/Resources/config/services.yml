@@ -7,11 +7,22 @@
 services:
   charly_platform.antispam:
     class: CHARLY\PlatformBundle\Antispam\Antispam
+    arguments:
+      - 50
+
+  charly_platform.purger.advert:
+    class: CHARLY\PlatformBundle\Purger\AdvertPurger
+    arguments:
+      - "@mailer"
+      #- "@doctrine.orm.default_entity_manager"
+      - "@doctrine.orm.entity_manager"
+      #- "@doctrine"
 
   charly_platform.email.application_mailer:
     class: CHARLY\PlatformBundle\Email\ApplicationMailer
     arguments:
       - "@mailer"
+      - "charly.learn@gmail.com"
 
   charly_platform.doctrine_listener.application_creation:
     class: CHARLY\PlatformBundle\DoctrineListener\ApplicationCreationListener

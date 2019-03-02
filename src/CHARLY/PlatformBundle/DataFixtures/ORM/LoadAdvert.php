@@ -56,6 +56,7 @@ class LoadAdvert implements FixtureInterface
                     $ad->addSkill($advtSkill);
                 }
             }
+
             $ad->setImage($image);
             if(isset($advert['applications'])){
                 foreach ($advert['applications'] as $application){
