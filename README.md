@@ -1,9 +1,6 @@
-img {
-max-size: 150px;
-}
-![logo Application](/web/image/logo.png)
+![logo Application](/web/image/litle_logo.png)
 
-$copy meurtelle54
+&copy meurtelle54
 ===========
 
 

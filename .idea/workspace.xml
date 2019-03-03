@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8acfbd06-4588-4d18-93f0-74294f19164e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/app/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppCache.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppCache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.phar" beforeDir="false" afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,9 +60,11 @@
                           <file pinned="false" current-in-tab="true">
                             <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Controller/CoreController.php">
                               <provider selected="true" editor-type-id="text-editor">
-                                <state relative-caret-position="135">
-                                  <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+                                <state relative-caret-position="195">
+                                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
                                   <folding>
+                                    <element signature="e#156#592#0#PHP" expanded="true" />
+                                    <element signature="e#202#372#0#PHP" expanded="true" />
                                     <element signature="e#261#300#0#PHP" expanded="true" />
                                   </folding>
                                 </state>
@@ -993,7 +983,7 @@
       <workItem from="1550579883403" duration="43153000" />
       <workItem from="1551093511534" duration="2003000" />
       <workItem from="1551106987425" duration="26942000" />
-      <workItem from="1551542491408" duration="5596000" />
+      <workItem from="1551542491408" duration="6086000" />
     </task>
     <task id="LOCAL-00001" summary="create repository Vcs git for project symfony with OpenClassroom">
       <created>1542209791663</created>
@@ -1107,11 +1097,25 @@
       <option name="project" value="LOCAL" />
       <updated>1551552313976</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="setting compliance for tp and write README">
+      <created>1551617327467</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1551617327467</updated>
+    </task>
+    <task id="LOCAL-00018" summary="markedstyle for readme test">
+      <created>1551617617338</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1551617617338</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323281000" />
+    <option name="totallyTimeSpent" value="323771000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1232,7 +1236,9 @@
     <MESSAGE value="clean fixture and advertController and add todo bidirectionnel relation and create static function &#10;in loadSkill for use in loadAdvert" />
     <MESSAGE value="finish tp consolidation du code et optimisation des requêtes via le repository de l'entité&#10;et create new advert via fixture loadAdvert" />
     <MESSAGE value="delete info" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete info" />
+    <MESSAGE value="setting compliance for tp and write README" />
+    <MESSAGE value="markedstyle for readme test" />
+    <option name="LAST_COMMIT_MESSAGE" value="markedstyle for readme test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1432,16 +1438,6 @@
             <element signature="e#553#680#0#PHP" expanded="true" />
             <element signature="e#2738#3360#0#PHP" expanded="true" />
             <element signature="e#4877#6687#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Controller/CoreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="e#261#300#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1752,6 +1748,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/CoreBundle/Controller/CoreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#156#592#0#PHP" expanded="true" />
+            <element signature="e#202#372#0#PHP" expanded="true" />
+            <element signature="e#261#300#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
