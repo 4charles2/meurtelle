@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8acfbd06-4588-4d18-93f0-74294f19164e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/app/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppCache.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppCache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/parameters.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/orm/docs/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/orm/docs/en/cookbook/aggregate-fields.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/orm/docs/en/cookbook/strategy-cookbook-introduction.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/jdorn/sql-formatter/tests/sql.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/monolog/monolog/doc/01-usage.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/monolog/monolog/doc/02-handlers-formatters-processors.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/doc/overview.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/utf-8/three.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.phar" beforeDir="false" afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,15 +87,24 @@
                   </split-first>
                   <split-second>
                     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-                      <file pinned="false" current-in-tab="true">
+                      <file pinned="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Purger/AdvertPurger.php">
                           <provider selected="true" editor-type-id="text-editor">
                             <state relative-caret-position="480">
-                              <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+                              <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
                               <folding>
                                 <element signature="e#6#110#0#PHP" expanded="true" />
                                 <element signature="e#305#458#0#PHP" expanded="true" />
                               </folding>
+                            </state>
+                          </provider>
+                        </entry>
+                      </file>
+                      <file pinned="false" current-in-tab="true">
+                        <entry file="file://$PROJECT_DIR$/.gitignore">
+                          <provider selected="true" editor-type-id="text-editor">
+                            <state relative-caret-position="180">
+                              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
                             </state>
                           </provider>
                         </entry>
@@ -319,14 +331,14 @@
                 </leaf>
               </split-first>
               <split-second>
-                <splitter split-orientation="vertical" split-proportion="0.59435624">
+                <splitter split-orientation="vertical" split-proportion="0.53791887">
                   <split-first>
                     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-                      <file pinned="false" current-in-tab="true">
+                      <file pinned="false" current-in-tab="false">
                         <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state relative-caret-position="105">
-                              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+                            <state relative-caret-position="135">
+                              <caret line="9" column="31" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="31" />
                             </state>
                           </provider>
                         </entry>
@@ -345,11 +357,11 @@
                           </provider>
                         </entry>
                       </file>
-                      <file pinned="false" current-in-tab="false">
+                      <file pinned="false" current-in-tab="true">
                         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state relative-caret-position="-682">
-                              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+                            <state relative-caret-position="126">
+                              <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
                             </state>
                           </provider>
                         </entry>
@@ -384,8 +396,8 @@
                       <file pinned="false" current-in-tab="true">
                         <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state relative-caret-position="197">
-                              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+                            <state relative-caret-position="135">
+                              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
                             </state>
                           </provider>
                         </entry>
@@ -524,7 +536,6 @@
         <option value="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/index.html.twig" />
         <option value="$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/views/News/article.html.twig" />
         <option value="$PROJECT_DIR$/src/CHARLY/CoreBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/config/config_test.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/Ressources/views/recepAppliAdvert.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -549,12 +560,13 @@
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Repository/AdvertRepository.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Purger/AdvertPurger.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Entity/AdvertSkill.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DoctrineListener/ApplicationCreationListener.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/DataFixtures/ORM/LoadAdvert.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Email/ApplicationMailer.php" />
         <option value="$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
       </list>
     </option>
   </component>
@@ -605,10 +617,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="377" />
-    <option name="y" value="264" />
-    <option name="width" value="1898" />
-    <option name="height" value="778" />
+    <option name="x" value="93" />
+    <option name="y" value="152" />
+    <option name="width" value="1553" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -868,7 +880,31 @@
             <path>
               <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
               <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meurtelle54" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="bundles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="meurtelle54" type="b2602c69:ProjectViewProjectNode" />
@@ -957,7 +993,7 @@
       <workItem from="1550579883403" duration="43153000" />
       <workItem from="1551093511534" duration="2003000" />
       <workItem from="1551106987425" duration="26942000" />
-      <workItem from="1551542491408" duration="1268000" />
+      <workItem from="1551542491408" duration="5596000" />
     </task>
     <task id="LOCAL-00001" summary="create repository Vcs git for project symfony with OpenClassroom">
       <created>1542209791663</created>
@@ -1064,11 +1100,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551485105515</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="delete info">
+      <created>1551552313976</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551552313976</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="318953000" />
+    <option name="totallyTimeSpent" value="323281000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1083,7 +1126,7 @@
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.113275036" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.113275036" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50141644" side_tool="true" weight="0.20738254" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1096,7 +1139,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4986577" weight="0.42992702" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" visible="true" weight="0.22116788" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" visible="true" weight="0.22116788" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013423" side_tool="true" weight="0.27478755" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" weight="0.05382436" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="13" />
@@ -1188,7 +1231,8 @@
     <MESSAGE value="install extension doctrine StofDoctrineExtensionsBundle" />
     <MESSAGE value="clean fixture and advertController and add todo bidirectionnel relation and create static function &#10;in loadSkill for use in loadAdvert" />
     <MESSAGE value="finish tp consolidation du code et optimisation des requêtes via le repository de l'entité&#10;et create new advert via fixture loadAdvert" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish tp consolidation du code et optimisation des requêtes via le repository de l'entité&#10;et create new advert via fixture loadAdvert" />
+    <MESSAGE value="delete info" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1252,38 +1296,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Repository/DefaultRepositoryFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/router_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="597" selection-start-line="597" selection-end-line="597" />
-          <folding>
-            <element signature="e#23284#23459#0#PHP" expanded="true" />
-            <element signature="e#23540#24193#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/DataCollector/DumpDataCollector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="246" selection-start-line="246" selection-end-line="246" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1608,13 +1620,6 @@
     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CHARLY/NewsBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1683,35 +1688,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Purger/AdvertPurger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="480">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+          <folding>
+            <element signature="e#6#110#0#PHP" expanded="true" />
+            <element signature="e#305#458#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-682">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="180">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <folding>
+            <element signature="n#AppKernel#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#AppCache#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="135">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Purger/AdvertPurger.php">
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-          <folding>
-            <element signature="e#6#110#0#PHP" expanded="true" />
-            <element signature="e#305#458#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CHARLY/PlatformBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
