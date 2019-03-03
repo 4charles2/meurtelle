@@ -1,6 +1,6 @@
 ![logo Application](/web/image/litle_logo.png)
 
-&copy meurtelle54
+meurtelle54
 ===========
 
 
