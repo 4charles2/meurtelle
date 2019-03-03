@@ -1,3 +1,6 @@
+img {
+max-size: 150px;
+}
 ![logo Application](/web/image/logo.png)
 
 $copy meurtelle54
