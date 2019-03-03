@@ -19,18 +19,18 @@ INSTALLATION
 ------------------
 
 
-php composer.phar install (installe le project) Une erreur peut subvenir could not open input file : app/console ne pas en tenir compte l'installation à réussi tout de même.  
+**php composer.phar install** (installe le project) Une erreur peut subvenir could not open input file : app/console ne pas en tenir compte l'installation à réussi tout de même.  
 
 
-php bin/console doctrine:database:create (Créer la table)  
+**php bin/console doctrine:database:create** (Créer la table)  
 Attention si la table symfony existe déjà dans votre base SQL une erreur sera rencontré  
 Solution changer le nom dans parameter.yml du project a la ligne 5 ou supprimer la table symfony via phpmyadmin de votre base.  
 
 
-php bin/console doctrine:schema:update --force (Créer les bases de données)  
+**php bin/console doctrine:schema:update --force** (Créer les bases de données)  
 
 
-php bin/console doctrine:fixture:load (Remplie les bases de données)  
+**php bin/console doctrine:fixture:load** (Remplie les bases de données)  
 Si une erreur s'affiche dans la console Exception occured while flushing email queue: Connection could not be established with host 127.0.01 [Connection refused #61] c'est normal car des candidature sont créer avec les fixtures et un mail automatique est envoyé mais si vous n'avez pas renseigné vos informations de mail comme décrit ci-dessous sa déclenche cette erreur. 
 Cela n'est pas obligatoire pour le bon fonctionnement de l'application . Ne pas sans préoccuper  
 

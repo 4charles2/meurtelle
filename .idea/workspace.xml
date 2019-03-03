@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8acfbd06-4588-4d18-93f0-74294f19164e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="8acfbd06-4588-4d18-93f0-74294f19164e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,8 +90,8 @@
                       <file pinned="false" current-in-tab="true">
                         <entry file="file://$PROJECT_DIR$/.gitignore">
                           <provider selected="true" editor-type-id="text-editor">
-                            <state relative-caret-position="180">
-                              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+                            <state relative-caret-position="165">
+                              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
                             </state>
                           </provider>
                         </entry>
@@ -983,7 +980,7 @@
       <workItem from="1550579883403" duration="43153000" />
       <workItem from="1551093511534" duration="2003000" />
       <workItem from="1551106987425" duration="26942000" />
-      <workItem from="1551542491408" duration="6086000" />
+      <workItem from="1551542491408" duration="6120000" />
     </task>
     <task id="LOCAL-00001" summary="create repository Vcs git for project symfony with OpenClassroom">
       <created>1542209791663</created>
@@ -1111,11 +1108,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551617617338</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="markedstyle for readm">
+      <created>1551619362894</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1551619362894</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323771000" />
+    <option name="totallyTimeSpent" value="323805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1238,7 +1242,8 @@
     <MESSAGE value="delete info" />
     <MESSAGE value="setting compliance for tp and write README" />
     <MESSAGE value="markedstyle for readme test" />
-    <option name="LAST_COMMIT_MESSAGE" value="markedstyle for readme test" />
+    <MESSAGE value="markedstyle for readm" />
+    <option name="LAST_COMMIT_MESSAGE" value="markedstyle for readm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1695,13 +1700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/autoload.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1760,6 +1758,13 @@
             <element signature="e#202#372#0#PHP" expanded="true" />
             <element signature="e#261#300#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
